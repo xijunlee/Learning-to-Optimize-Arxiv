@@ -1,6 +1,12 @@
 # CO-ML-papers
 The repository archives papers regarding the combination of combinatorial optimization and machine learning and corresponding reading notes. 
 
+|                                                              | R    |
+| ------------------------------------------------------------ | ---- |
+| Machine Learning for Combinatorial Optimization: a Methodological Tour d'Horizon |      |
+|                                                              |      |
+|                                                              |      |
+
 
 
 ## CO+ML Survey Bengio 2018
