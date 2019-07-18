@@ -3,7 +3,7 @@ The repository archives papers regarding the combination of combinatorial optimi
 
 |      |      |      |      |
 | ---- | ---- | ---- | ---- |
-| M    | S    |      |      |
+|      |      |      |      |
 |      |      |      |      |
 |      |      |      |      |
 |      |      |      |      |
