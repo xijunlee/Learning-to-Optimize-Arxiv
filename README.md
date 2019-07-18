@@ -1,11 +1,11 @@
 # CO-ML-papers
 The repository archives papers regarding the combination of combinatorial optimization and machine learning and corresponding reading notes. 
 
-|                                                              | R    |
-| ------------------------------------------------------------ | ---- |
-| Machine Learning for Combinatorial Optimization: a Methodological Tour d'Horizon |      |
-|                                                              |      |
-|                                                              |      |
+| Paper Title                                                  | Reader                   |
+| ------------------------------------------------------------ | ------------------------ |
+| Machine Learning for Combinatorial Optimization: a Methodological Tour d'Horizon | Xijun, Mingxuan, Huiling |
+|                                                              |                          |
+|                                                              |                          |
 
 
 
