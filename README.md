@@ -1,11 +1,19 @@
 # CO-ML-papers
 The repository archives papers regarding the combination of combinatorial optimization and machine learning and corresponding reading notes. 
 
-| Paper Title                                                  | Reader                   |
-| ------------------------------------------------------------ | ------------------------ |
+| Paper Title                                                  | Readers                  |
+| :----------------------------------------------------------- | ------------------------ |
 | Machine Learning for Combinatorial Optimization: a Methodological Tour d'Horizon | Xijun, Mingxuan, Huiling |
-|                                                              |                          |
-|                                                              |                          |
+| Learning to branch                                           | Xijun, Mingxuan, Huiling |
+| Learning to Search in Branch and Bound Algorithm             | Xijun, Mingxuan, Huiling |
+| Learning to branch in mixed integer programming              | Xijun, Mingxuan, Huiling |
+| Learning Combinatorial Optimization Algorithms over Graphs   |                          |
+| Automated Treatment Planning in Radiation Therapy using Generative Adversarial Networks |                          |
+| Boosting Combinatorial Problem Modeling with Machine Learning |                          |
+| Exact Combinatorial Optimization with Graph Convolutional Neural Networks with Graph Convolutional Neural Networks |                          |
+| Inductive Representation Learning on Large Graphs            |                          |
+| Learning Combinatorial Optimization Algorithms over Graphs   |                          |
+| Learning Permutations with Sinkhorn Policy Gradient          |                          |
 
 
 
