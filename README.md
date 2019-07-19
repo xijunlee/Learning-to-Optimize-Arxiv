@@ -5,7 +5,7 @@ The repository archives papers regarding the combination of combinatorial optimi
 | :----------------------------------------------------------- | ------------------------ |
 | Machine Learning for Combinatorial Optimization: a Methodological Tour d'Horizon | Xijun, Mingxuan, Huiling |
 | Learning to branch                                           | Xijun, Mingxuan, Huiling |
-| Learning to Search in Branch and Bound Algorithm             | Xijun, Mingxuan, Huiling |
+| Learning to Search in Branch and Bound Algorithm             | Xijun, Mingxuan, Huiling (**again this week**) |
 | Learning to branch in mixed integer programming              | Xijun, Mingxuan, Huiling |
 | Learning Combinatorial Optimization Algorithms over Graphs   |    Huiling (**again**)                  |
 | Automated Treatment Planning in Radiation Therapy using Generative Adversarial Networks |        Huiling ( **including other generative models** )               |
