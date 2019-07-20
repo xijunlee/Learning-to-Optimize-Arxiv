@@ -12,9 +12,10 @@ The repository archives papers regarding the combination of combinatorial optimi
 | Boosting Combinatorial Problem Modeling with Machine Learning |  Huiling                        |
 | Exact Combinatorial Optimization with Graph Convolutional Neural Networks with Graph Convolutional Neural Networks |                          |
 | Inductive Representation Learning on Large Graphs            |                          |
-| Learning Combinatorial Optimization Algorithms over Graphs   |                          |
+| Learning Combinatorial Optimization Algorithms over Graphs   | Xijun |
 | Learning Permutations with Sinkhorn Policy Gradient          |                          |
 | Predicting Tactical Solutions to Operational Planning Problems under Imperfect Information| Huiling ( **plan**) |
+| Discriminative Embeddings of Latent Variable Models for Structured Data | Xijun (plan) |
 
 
 ## CO+ML Survey Bengio 2018
