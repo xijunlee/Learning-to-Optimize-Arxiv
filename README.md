@@ -16,7 +16,7 @@ The repository archives papers regarding the combination of combinatorial optimi
 | Learning Permutations with Sinkhorn Policy Gradient          |                          |
 | Predicting Tactical Solutions to Operational Planning Problems under Imperfect Information| Huiling ( **plan**) |
 | Discriminative Embeddings of Latent Variable Models for Structured Data | Xijun (plan) |
-
+| Learning when to use a decomposition                         |   Zhenkun               |
 
 ## CO+ML Survey Bengio 2018
 
@@ -63,3 +63,14 @@ Paper location: CO-ML-papers⁩/papers⁩/Learning to Branch in Mixed Integer Pr
 Notes:
 
 这篇文章是利用learning to rank学习branch & bound中的经典打分策略Strong Branching(SB)。其具体做法是，在面对任何一个MIP问题时，其算法在500个分支点前都用经典的Strong Branching作为变量评分标准来选择节点的最优分支变量，同时保留过程中的特征（手工构造的72个特种）和打分结果，这些特征和打分结果构成了训练集。在第501个节点时，利用learning to rank学出训练集中的SB打分策略，在后续节点中的变量选择中就都采用learning to rank来选择最优分支变量。 —— Xijun
+
+## Learning when to use a decomposition
+
+Kruber M, Lübbecke M E, Parmentier A. Learning when to use a decomposition[C]//International Conference on AI and OR Techniques in Constraint Programming for Combinatorial Optimization Problems. Springer, Cham, 2017: 202-210.
+
+Paper location: CO-ML-papers⁩/papers⁩/Learning when to use a decomposition.pdf
+
+Notes:
+
+这篇文章提出监督学习来检测MIP问题结构，并根据结构安排合适合适分解策略，进而提升solver的求解速度的。当一个MIP问题具有arrowhead结构或者double-bordered block diagonal form。这个MIP就可以利用DW分解来进行更快速的求解。本文将MIP的结构detect问题建模成一个0-1分类问题。其中输入参数是，MIP，分解策略，以及时间范围。本文采用的是scikit-learn library的标准分类器。--zhenkun
+
