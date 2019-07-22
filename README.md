@@ -17,6 +17,7 @@ The repository archives papers regarding the combination of combinatorial optimi
 | Predicting Tactical Solutions to Operational Planning Problems under Imperfect Information| Huiling ( **plan**) |
 | Discriminative Embeddings of Latent Variable Models for Structured Data | Xijun (plan) |
 | Learning when to use a decomposition                         |   Zhenkun               |
+|Best arm identification in multi-armed bandits with delayed feedback| Huiling |
 
 ## CO+ML Survey Bengio 2018
 
@@ -74,3 +75,11 @@ Notes:
 
 这篇文章提出监督学习来检测MIP问题结构，并根据结构安排合适合适分解策略，进而提升solver的求解速度的。当一个MIP问题具有arrowhead结构或者double-bordered block diagonal form。这个MIP就可以利用DW分解来进行更快速的求解。本文将MIP的结构detect问题建模成一个0-1分类问题。其中输入参数是，MIP，分解策略，以及时间范围。本文采用的是scikit-learn library的标准分类器。--zhenkun
 
+
+## Best arm identification in multi-armed bandits with delayed feedback ##
+
+Aditya Grover, Todor Markov, Peter Attia, Norman Jin, Nicholas Perkins, Bryan Cheong, Michael Chen, Zi Yang, Stephen Harris, William Chueh, Stefano Ermon (Stanford University University of Michigan Lawrence Berkeley National Laboratory )
+
+Notes: 
+
+这篇文章的思路与其他文章差别很大，bandit没有用来解决问题本身，而是用来挑选cplex的启发式策略。文章默认，cplex中有很多启发式策略，而针对不同的问题，会自动的筛选不同的。但是在筛选之前，cplex内部会有测试机制。本文就是为了缩短测试的时间而设计的。training set是2000个MIP问题，在有32个arms的rl模型上，利用不同时刻的feedback做训练。test的mip问题，则直接根据这32个arm所对应的特征，挑选启发式算法。因此，##启发式算法本身不重要，重要的是它们做表现出来的特征##。值得我们学习的地方是，这个文章的是把求解Mip转成了资源分配问题，同时是一个online的思路，很适合处理动态的云资源/wireless资源分配问题。
