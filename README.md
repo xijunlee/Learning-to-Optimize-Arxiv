@@ -7,15 +7,14 @@ The repository archives papers regarding the combination of combinatorial optimi
 | Learning to branch                                           | Xijun, Mingxuan, Huiling |
 | Learning to Search in Branch and Bound Algorithm             | Xijun, Mingxuan, Huiling (**again this week**) |
 | Learning to branch in mixed integer programming              | Xijun, Mingxuan, Huiling |
-| Learning Combinatorial Optimization Algorithms over Graphs   |    Huiling (**again**)                  |
-| Automated Treatment Planning in Radiation Therapy using Generative Adversarial Networks |        Huiling ( **including other generative models** )               |
+| Learning Combinatorial Optimization Algorithms over Graphs   |    Huiling (**again**), Xijun                  |
+| Automated Treatment Planning in Radiation Therapy using Generative Adversarial Networks |        Huiling (**including other generative models** )               |
 | Boosting Combinatorial Problem Modeling with Machine Learning |  Huiling                        |
 | Exact Combinatorial Optimization with Graph Convolutional Neural Networks with Graph Convolutional Neural Networks |                          |
 | Inductive Representation Learning on Large Graphs            |                          |
-| Learning Combinatorial Optimization Algorithms over Graphs   | Xijun |
 | Learning Permutations with Sinkhorn Policy Gradient          |                          |
-| Predicting Tactical Solutions to Operational Planning Problems under Imperfect Information| Huiling ( **plan**) |
-| Discriminative Embeddings of Latent Variable Models for Structured Data | Xijun (plan) |
+| Predicting Tactical Solutions to Operational Planning Problems under Imperfect Information| Huiling (**plan**) |
+| Discriminative Embeddings of Latent Variable Models for Structured Data | Xijun |
 | Learning when to use a decomposition                         |   Zhenkun               |
 |Best arm identification in multi-armed bandits with delayed feedback| Huiling |
 
