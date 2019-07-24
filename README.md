@@ -8,7 +8,7 @@ The repository archives papers regarding the combination of combinatorial optimi
 | Learning to Search in Branch and Bound Algorithm             | Xijun, Mingxuan, Huiling (**again this week**) |
 | Learning to branch in mixed integer programming              | Xijun, Mingxuan, Huiling |
 | Learning Combinatorial Optimization Algorithms over Graphs   |    Huiling (**again**), Xijun                  |
-| Automated Treatment Planning in Radiation Therapy using Generative Adversarial Networks |        Huiling (**including other generative models** )               |
+| Automated Treatment Planning in Radiation Therapy using Generative Adversarial Networks |        Huiling (**including other generative models**)               |
 | Boosting Combinatorial Problem Modeling with Machine Learning |  Huiling                        |
 | Exact Combinatorial Optimization with Graph Convolutional Neural Networks with Graph Convolutional Neural Networks |                          |
 | Inductive Representation Learning on Large Graphs            |                          |
@@ -88,12 +88,22 @@ Notes:
 
 Khalil, Elias, et al. "Learning combinatorial optimization algorithms over graphs." Advances in Neural Information Processing Systems. 2017.
 
-Paper location: CO-ML-papers⁩/papers⁩/...
+Paper location: CO-ML-papers⁩/papers⁩/7214-learning-combinatorial-optimization-algorithms-over-graphs.pdf
 
 Notes:
 
 这篇文章挑了三个跟图相关的优化问题Minimum Vertex Cover, Maximum Cut,以及TSP。将求解这三个问题建模为Markov Decision Process，即有一个partial solution（set of vertex）,然后从剩下的vertex set中每一步挑选一个点进入partial solution，直到拼成一个合法解（MDP终止）。partial solution中的节点状态利用structure2vec来描述，利用Q-learning方法来学习action policy。需要注意的是其structure2vec和Q-evaluation function是放在一起来学习的。
 
-该算法的优点是：graph embedding parameterization can deal with different graph instances and sizes seamlessly. 能自适应地求解来自同一分布但不同size的问题，抓住了同一分布问题的本质。
+该算法的优点是：graph embedding parameterization can deal with different graph instances and sizes seamlessly. 能自适应地求解来自同一分布但不同size的问题，抓住了同一分布问题的本质。  —— Xijun
 
-## Discriminative Embeddings of Latent Variable Models for Structured Data ##
+## Exact Combinatorial Optimization with Graph Convolutional Neural Networks ##
+
+Gasse, Maxime, et al. "Exact Combinatorial Optimization with Graph Convolutional Neural Networks." arXiv preprint arXiv:1906.01629 (2019).
+
+Paper location: CO-ML-papers⁩/papers⁩/Exact Combinatorial Optimization with Graph Convolutional Neural.pdf
+
+Notes:
+
+这篇文章是利用graph convolutional network来实现learn to branch。具体做法也是将B&B建模成Markov Decision Process。MDP中的每个状态state是由constraint和variable的bipartite图表示，action是从fractional variable中挑选一个变量来做分支。但是其并没有利用reinforcement learning来完成policy的学习，而是通过imitation learning。因此其需要事先构造训练集，即(B&B树的状态，各个fractional variable的得分)。这里B&B树的状态利用构造的bipartite graph表示，variable得分根据strong branching score公式得到。有了这些训练集后，便利用imitation learning的方式训练一个graph convolutional neural network来学习strong branching score挑选variable的policy。
+
+优势：利用GCNN学习strong branching的policy，避免了手工构造特征。实验结果表现超过其他利用机器学习方法提速的branching策略，同时也超过了SCIP的branching策略。
