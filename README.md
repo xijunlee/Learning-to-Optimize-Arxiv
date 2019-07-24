@@ -82,3 +82,18 @@ Aditya Grover, Todor Markov, Peter Attia, Norman Jin, Nicholas Perkins, Bryan Ch
 Notes: 
 
 这篇文章的思路与其他文章差别很大，bandit没有用来解决问题本身，而是用来挑选cplex的启发式策略。文章默认，cplex中有很多启发式策略，而针对不同的问题，会自动的筛选不同的。但是在筛选之前，cplex内部会有测试机制。本文就是为了缩短测试的时间而设计的。training set是2000个MIP问题，在有32个arms的rl模型上，利用不同时刻的feedback做训练。test的mip问题，则直接根据这32个arm所对应的特征，挑选启发式算法。因此，##启发式算法本身不重要，重要的是它们做表现出来的特征##。值得我们学习的地方是，这个文章的是把求解Mip转成了资源分配问题，同时是一个online的思路，很适合处理动态的云资源/wireless资源分配问题。-- Huiling
+
+
+## Learning Combinatorial Optimization Algorithms over Graphs ##
+
+Khalil, Elias, et al. "Learning combinatorial optimization algorithms over graphs." Advances in Neural Information Processing Systems. 2017.
+
+Paper location: CO-ML-papers⁩/papers⁩/...
+
+Notes:
+
+这篇文章挑了三个跟图相关的优化问题Minimum Vertex Cover, Maximum Cut,以及TSP。将求解这三个问题建模为Markov Decision Process，即有一个partial solution（set of vertex）,然后从剩下的vertex set中每一步挑选一个点进入partial solution，直到拼成一个合法解（MDP终止）。partial solution中的节点状态利用structure2vec来描述，利用Q-learning方法来学习action policy。需要注意的是其structure2vec和Q-evaluation function是放在一起来学习的。
+
+该算法的优点是：graph embedding parameterization can deal with different graph instances and sizes seamlessly. 能自适应地求解来自同一分布但不同size的问题，抓住了同一分布问题的本质。
+
+## Discriminative Embeddings of Latent Variable Models for Structured Data ##
