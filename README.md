@@ -13,7 +13,7 @@ The repository archives papers regarding the combination of combinatorial optimi
 | Exact Combinatorial Optimization with Graph Convolutional Neural Networks with Graph Convolutional Neural Networks |Xijun                          |Xijun     |
 | Predicting Tactical Solutions to Operational Planning Problems under Imperfect Information| Huiling |        |
 | Discriminative Embeddings of Latent Variable Models for Structured Data | Xijun |       |
-| Learning when to use a decomposition                         |   Zhenkun               |   zhenkun       |
+| Learning when to use a decomposition                         |   Zhenkun               |   Zhenkun       |
 |Best arm identification in multi-armed bandits with delayed feedback| Huiling |     Huiling      |
 |Solving a New 3D Bin Packing Problem with Deep Reinforcement Learning Method| Xijun|Xijun           |
 
