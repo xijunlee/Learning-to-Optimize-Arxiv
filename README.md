@@ -1,23 +1,23 @@
 # CO-ML-papers
 The repository archives papers regarding the combination of combinatorial optimization and machine learning and corresponding reading notes. 
 
-| Paper Title                                                  | Readers                  |
-| :----------------------------------------------------------- | ------------------------ |
+| Paper Title                                                  | Readers                  |Slide              |
+| :----------------------------------------------------------- | ------------------------ |-------------------|
 | Machine Learning for Combinatorial Optimization: a Methodological Tour d'Horizon | Xijun, Mingxuan, Huiling |
-| Learning to branch                                           | Xijun, Mingxuan, Huiling |
-| Learning to Search in Branch and Bound Algorithm             | Xijun, Mingxuan, Huiling (**again this week**) |
-| Learning to branch in mixed integer programming              | Xijun, Mingxuan, Huiling |
-| Learning Combinatorial Optimization Algorithms over Graphs   |    Huiling (**again**), Xijun                  |
-| Automated Treatment Planning in Radiation Therapy using Generative Adversarial Networks |        Huiling (**including other generative models**)               |
-| Boosting Combinatorial Problem Modeling with Machine Learning |  Huiling                        |
-| Exact Combinatorial Optimization with Graph Convolutional Neural Networks with Graph Convolutional Neural Networks |                          |
-| Inductive Representation Learning on Large Graphs            |                          |
-| Learning Permutations with Sinkhorn Policy Gradient          |                          |
-| Predicting Tactical Solutions to Operational Planning Problems under Imperfect Information| Huiling (**plan**) |
-| Discriminative Embeddings of Latent Variable Models for Structured Data | Xijun |
-| Learning when to use a decomposition                         |   Zhenkun               |
-|Best arm identification in multi-armed bandits with delayed feedback| Huiling |
-|Solving a New 3D Bin Packing Problem with Deep Reinforcement Learning Method| Xijun|
+| Learning to branch                                           | Xijun, Mingxuan, Huiling |                    |
+| Learning to Search in Branch and Bound Algorithm             | Xijun, Mingxuan, Huiling (**again this week**) | |
+| Learning to branch in mixed integer programming              | Xijun, Mingxuan, Huiling |                   |
+| Learning Combinatorial Optimization Algorithms over Graphs   |    Huiling (**again**), Xijun                  |         |
+| Automated Treatment Planning in Radiation Therapy using Generative Adversarial Networks |        Huiling (**including other generative models**)               |      |
+| Boosting Combinatorial Problem Modeling with Machine Learning |  Huiling                        |     |
+| Exact Combinatorial Optimization with Graph Convolutional Neural Networks with Graph Convolutional Neural Networks |                          |     |
+| Inductive Representation Learning on Large Graphs            |                          |         |
+| Learning Permutations with Sinkhorn Policy Gradient          |                          |         |
+| Predicting Tactical Solutions to Operational Planning Problems under Imperfect Information| Huiling (**plan**) |        |
+| Discriminative Embeddings of Latent Variable Models for Structured Data | Xijun |       |
+| Learning when to use a decomposition                         |   Zhenkun               |          |
+|Best arm identification in multi-armed bandits with delayed feedback| Huiling |          |
+|Solving a New 3D Bin Packing Problem with Deep Reinforcement Learning Method| Xijun|           |
 
 
 ## CO+ML Survey Bengio 2018
