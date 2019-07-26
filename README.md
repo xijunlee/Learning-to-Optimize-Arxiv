@@ -8,15 +8,14 @@ The repository archives papers regarding the combination of combinatorial optimi
 | Learning to Search in Branch and Bound Algorithm             | Xijun, Mingxuan, Huiling |Mingxuan |
 | Learning to branch in mixed integer programming              | Xijun, Mingxuan, Huiling |Mingxuan            |
 | Learning Combinatorial Optimization Algorithms over Graphs   |    Huiling (**again**), Xijun      |Mingxuan        |
-| Automated Treatment Planning in Radiation Therapy using Generative Adversarial Networks |        Huiling (**including other generative models**)               |      |
+| Automated Treatment Planning in Radiation Therapy using Generative Adversarial Networks |        Huiling               |    Huiling   |
 | Boosting Combinatorial Problem Modeling with Machine Learning |  Huiling                        |     |
 | Exact Combinatorial Optimization with Graph Convolutional Neural Networks with Graph Convolutional Neural Networks |                          |     |
-| Inductive Representation Learning on Large Graphs            |                          |         |
-| Learning Permutations with Sinkhorn Policy Gradient          |                          |         |
-| Predicting Tactical Solutions to Operational Planning Problems under Imperfect Information| Huiling (**plan**) |        |
+| Inductive Representation Learning on Large Graphs            |            Huiling              |    Huiling      |
+| Predicting Tactical Solutions to Operational Planning Problems under Imperfect Information| Huiling |        |
 | Discriminative Embeddings of Latent Variable Models for Structured Data | Xijun |       |
 | Learning when to use a decomposition                         |   Zhenkun               |          |
-|Best arm identification in multi-armed bandits with delayed feedback| Huiling |          |
+|Best arm identification in multi-armed bandits with delayed feedback| Huiling |     Huiling      |
 |Solving a New 3D Bin Packing Problem with Deep Reinforcement Learning Method| Xijun|Xijun           |
 
 
