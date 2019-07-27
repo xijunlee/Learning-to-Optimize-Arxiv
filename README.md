@@ -17,8 +17,8 @@ The repository archives papers regarding the combination of combinatorial optimi
 |Best arm identification in multi-armed bandits with delayed feedback| Huiling |     Huiling      |
 |Solving a New 3D Bin Packing Problem with Deep Reinforcement Learning Method| Xijun|Xijun           |
 |A Multi-task Selected Learning Approach for Solving 3D Flexible Bin Packing Problem| | |
-|Pointer Networks| | |
-|NEURAL COMBINATORIAL OPTIMIZATION WITH REINFORCEMENT LEARNING| | |
+|Pointer Networks| Huiling | Huiling |
+|NEURAL COMBINATORIAL OPTIMIZATION WITH REINFORCEMENT LEARNING| Huiling |  Huiling |
 
 ## CO+ML Survey Bengio 2018
 
