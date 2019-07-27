@@ -1,22 +1,24 @@
 # CO-ML-papers
 The repository archives papers regarding the combination of combinatorial optimization and machine learning and corresponding reading notes. 
 
-| Paper Title                                                  | Readers                  |
-| :----------------------------------------------------------- | ------------------------ |
-| Machine Learning for Combinatorial Optimization: a Methodological Tour d'Horizon | Xijun, Mingxuan, Huiling |
-| Learning to branch                                           | Xijun, Mingxuan, Huiling |
-| Learning to Search in Branch and Bound Algorithm             | Xijun, Mingxuan, Huiling (**again this week**) |
-| Learning to branch in mixed integer programming              | Xijun, Mingxuan, Huiling |
-| Learning Combinatorial Optimization Algorithms over Graphs   |    Huiling (**again**), Xijun                  |
-| Automated Treatment Planning in Radiation Therapy using Generative Adversarial Networks |        Huiling (**including other generative models**)               |
-| Boosting Combinatorial Problem Modeling with Machine Learning |  Huiling                        |
-| Exact Combinatorial Optimization with Graph Convolutional Neural Networks with Graph Convolutional Neural Networks |                          |
-| Inductive Representation Learning on Large Graphs            |                          |
-| Learning Permutations with Sinkhorn Policy Gradient          |                          |
-| Predicting Tactical Solutions to Operational Planning Problems under Imperfect Information| Huiling (**plan**) |
-| Discriminative Embeddings of Latent Variable Models for Structured Data | Xijun |
-| Learning when to use a decomposition                         |   Zhenkun               |
-|Best arm identification in multi-armed bandits with delayed feedback| Huiling |
+| Paper Title                                                  | Readers                  |Slide              |
+| :----------------------------------------------------------- | ------------------------ |-------------------|
+| Machine Learning for Combinatorial Optimization: a Methodological Tour d'Horizon | Xijun, Mingxuan, Huiling | |
+| Learning to branch                                           | Xijun, Mingxuan, Huiling |Mingxuan             |
+| Learning to Search in Branch and Bound Algorithm             | Xijun, Mingxuan, Huiling |Mingxuan |
+| Learning to branch in mixed integer programming              | Xijun, Mingxuan, Huiling |Mingxuan            |
+| Learning Combinatorial Optimization Algorithms over Graphs   |    Huiling (**again**), Xijun      |Mingxuan        |
+| Automated Treatment Planning in Radiation Therapy using Generative Adversarial Networks |        Huiling               |    Huiling   |
+| Boosting Combinatorial Problem Modeling with Machine Learning |  Huiling                        |     |
+| Exact Combinatorial Optimization with Graph Convolutional Neural Networks with Graph Convolutional Neural Networks |Xijun                          |Xijun     |
+| Predicting Tactical Solutions to Operational Planning Problems under Imperfect Information| Huiling |        |
+| Discriminative Embeddings of Latent Variable Models for Structured Data | Xijun |       |
+| Learning when to use a decomposition                         |   Zhenkun               |   Zhenkun       |
+|Best arm identification in multi-armed bandits with delayed feedback| Huiling |     Huiling      |
+|Solving a New 3D Bin Packing Problem with Deep Reinforcement Learning Method| Xijun|Xijun           |
+|A Multi-task Selected Learning Approach for Solving 3D Flexible Bin Packing Problem| | |
+|Pointer Networks| Huiling | Huiling |
+|NEURAL COMBINATORIAL OPTIMIZATION WITH REINFORCEMENT LEARNING| Huiling |  Huiling |
 
 ## CO+ML Survey Bengio 2018
 
@@ -107,3 +109,13 @@ Notes:
 这篇文章是利用graph convolutional network来实现learn to branch。具体做法也是将B&B建模成Markov Decision Process。MDP中的每个状态state是由constraint和variable的bipartite图表示，action是从fractional variable中挑选一个变量来做分支。但是其并没有利用reinforcement learning来完成policy的学习，而是通过imitation learning。因此其需要事先构造训练集，即(B&B树的状态，各个fractional variable的得分)。这里B&B树的状态利用构造的bipartite graph表示，variable得分根据strong branching score公式得到。有了这些训练集后，便利用imitation learning的方式训练一个graph convolutional neural network来学习strong branching score挑选variable的policy。
 
 优势：利用GCNN学习strong branching的policy，避免了手工构造特征。实验结果表现超过其他利用机器学习方法提速的branching策略，同时也超过了SCIP的branching策略。 —— Xijun
+
+## Solving a New 3D Bin Packing Problem with Deep Reinforcement Learning Method ##
+
+Hu, Haoyuan, et al. "Solving a new 3d bin packing problem with deep reinforcement learning method." arXiv preprint arXiv:1708.05930 (2017).
+
+Paper location: Solving a New 3D Bin Packing Problem with Deep Reinforcement Learning Metho.pdf
+
+Notes:
+
+这篇文章是阿里旗下菜鸟团队利用深度强化学习技术解决他们业务定义的一个新型3D bin packing problem (3DBPP)。具体问题定义为给定一系列待装载的item，如何将这些item装进一个bin中，使得这个bin的表面积最小。其方案思路为将整个3DBPP划分成三个连续的决策问题：1）决定item的装载顺序；2）决定每个item在bin中的摆放方向；3）决定每个item在bin中的摆放位置（coordinates）。上述决策问题中，第二、第三步均采用启发式方法，第一步(决定item的装载顺序）的问题利用深度强化学习来解决。具体来说，利用pointer networks来学习装载顺序的policy。其输入是待装载item的长宽高数据，输出是这些item的顺序(sequence of order)。需要注意的是，pointer network学到的装载policy应该是与摆放方向、摆放位置所采取的heurisitic算法强相关。因为pointer networks的学习（网络参数的更新）中，其reward的计算需要摆放方向、摆放位置所采取的heurisitic算法来辅助的（即算bin的表面积）。 —— Xijun
