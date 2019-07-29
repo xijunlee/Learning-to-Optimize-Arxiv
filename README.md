@@ -19,6 +19,7 @@ The repository archives papers regarding the combination of combinatorial optimi
 |A Multi-task Selected Learning Approach for Solving 3D Flexible Bin Packing Problem|Xijun |Xijun |
 |Pointer Networks| Huiling, Xijun | Huiling |
 |NEURAL COMBINATORIAL OPTIMIZATION WITH REINFORCEMENT LEARNING| Huiling,Xijun |  Huiling |
+|ATTENTION, LEARN TO SOLVE ROUTING PROBLEMS! | Huiling | |
 
 ## CO+ML Survey Bengio 2018
 
