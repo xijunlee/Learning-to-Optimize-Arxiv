@@ -16,9 +16,11 @@ The repository archives papers regarding the combination of combinatorial optimi
 | Learning when to use a decomposition                         |   Zhenkun               |   Zhenkun       |
 |Best arm identification in multi-armed bandits with delayed feedback| Huiling |     Huiling      |
 |Solving a New 3D Bin Packing Problem with Deep Reinforcement Learning Method| Xijun|Xijun           |
-|A Multi-task Selected Learning Approach for Solving 3D Flexible Bin Packing Problem| | |
-|Pointer Networks| Huiling | Huiling |
-|NEURAL COMBINATORIAL OPTIMIZATION WITH REINFORCEMENT LEARNING| Huiling |  Huiling |
+|A Multi-task Selected Learning Approach for Solving 3D Flexible Bin Packing Problem|Xijun |Xijun |
+|Pointer Networks| Huiling, Xijun | Huiling |
+|NEURAL COMBINATORIAL OPTIMIZATION WITH REINFORCEMENT LEARNING| Huiling,Xijun |  Huiling |
+|ATTENTION, LEARN TO SOLVE ROUTING PROBLEMS! | Huiling | |
+|Reinforcement learning learn to cut| Zhenkun |  |
 
 ## CO+ML Survey Bengio 2018
 
