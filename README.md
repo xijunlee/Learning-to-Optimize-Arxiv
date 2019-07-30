@@ -20,6 +20,7 @@ The repository archives papers regarding the combination of combinatorial optimi
 |Pointer Networks| Huiling, Xijun | Huiling |
 |NEURAL COMBINATORIAL OPTIMIZATION WITH REINFORCEMENT LEARNING| Huiling,Xijun |  Huiling |
 |ATTENTION, LEARN TO SOLVE ROUTING PROBLEMS! | Huiling | |
+|Reinforcement learning learn to cut| Zhenkun |  |
 
 ## CO+ML Survey Bengio 2018
 
