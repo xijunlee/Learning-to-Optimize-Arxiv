@@ -116,8 +116,16 @@ Notes:
 
 Hu, Haoyuan, et al. "Solving a new 3d bin packing problem with deep reinforcement learning method." arXiv preprint arXiv:1708.05930 (2017).
 
-Paper location: Solving a New 3D Bin Packing Problem with Deep Reinforcement Learning Metho.pdf
+Paper location: CO-ML-papers⁩/papers/Solving a New 3D Bin Packing Problem with Deep Reinforcement Learning Metho.pdf
 
 Notes:
 
 这篇文章是阿里旗下菜鸟团队利用深度强化学习技术解决他们业务定义的一个新型3D bin packing problem (3DBPP)。具体问题定义为给定一系列待装载的item，如何将这些item装进一个bin中，使得这个bin的表面积最小。其方案思路为将整个3DBPP划分成三个连续的决策问题：1）决定item的装载顺序；2）决定每个item在bin中的摆放方向；3）决定每个item在bin中的摆放位置（coordinates）。上述决策问题中，第二、第三步均采用启发式方法，第一步(决定item的装载顺序）的问题利用深度强化学习来解决。具体来说，利用pointer networks来学习装载顺序的policy。其输入是待装载item的长宽高数据，输出是这些item的顺序(sequence of order)。需要注意的是，pointer network学到的装载policy应该是与摆放方向、摆放位置所采取的heurisitic算法强相关。因为pointer networks的学习（网络参数的更新）中，其reward的计算需要摆放方向、摆放位置所采取的heurisitic算法来辅助的（即算bin的表面积）。 —— Xijun
+
+## A Multi-task Selected Learning Approach for Solving 3D Flexible Bin Packing Problem ##
+
+Duan, Lu, et al. "A Multi-task Selected Learning Approach for Solving 3D Flexible Bin Packing Problem." Proceedings of the 18th International Conference on Autonomous Agents and MultiAgent Systems. International Foundation for Autonomous Agents and Multiagent Systems, 2019.
+
+Paper location:  CO-ML-papers⁩/papers/A Multi-task Selected Learning Approach for Solving 3D Flexible Bin Packing Problem
+
+这篇文章是阿里旗下菜鸟团队在Solving a New 3D Bin Packing Problem with Deep Reinforcement Learning Method基础上的改进工作。在前述工作中其方案思路为将整个3DBPP划分成三个连续的决策问题：1）决定item的装载顺序；2）决定每个item在bin中的摆放方向；3）决定每个item在bin中的摆放位置（coordinates）。上述决策问题中，第二、第三步均采用启发式方法，第一步(决定item的装载顺序）的问题利用深度强化学习来解决。然后这篇文章的工作是将1）决定item的装载顺序和2）决定每个item在bin中的摆放方向都用RL的方式来优化，然后摆放位置仍然是启发式算法。其具体思路是类似于Pointer network，利用encoder与decoder的架构一起学习最优顺序和最优摆放方向的策略(所以是weight sharing)，其中除了利用了pointer networks本身的attention mechanism外，他们还提出了更高一层的intra-attention mechanism（即在decode的过程中除了利用encoder的hidden states信息外，还利用前序时间步的decoder的hidden state，能有效防止重复item在序列中重复出现）。 —— Xijun
