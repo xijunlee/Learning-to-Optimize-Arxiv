@@ -19,8 +19,9 @@ The repository archives papers regarding the combination of combinatorial optimi
 |A Multi-task Selected Learning Approach for Solving 3D Flexible Bin Packing Problem|Xijun |Xijun |
 |Pointer Networks| Huiling, Xijun | Huiling |
 |NEURAL COMBINATORIAL OPTIMIZATION WITH REINFORCEMENT LEARNING| Huiling,Xijun |  Huiling |
-|ATTENTION, LEARN TO SOLVE ROUTING PROBLEMS! | Huiling | |
+|ATTENTION, LEARN TO SOLVE ROUTING PROBLEMS! | Huiling | Huiling |
 |Reinforcement learning learn to cut| Zhenkun |  |
+|Reinforcement Learning for Solving the Vehicle Routing Problem| Huiling | Huiling |
 
 ## CO+ML Survey Bengio 2018
 
@@ -129,3 +130,31 @@ Duan, Lu, et al. "A Multi-task Selected Learning Approach for Solving 3D Flexibl
 Paper location:  CO-ML-papers⁩/papers/A Multi-task Selected Learning Approach for Solving 3D Flexible Bin Packing Problem
 
 这篇文章是阿里旗下菜鸟团队在Solving a New 3D Bin Packing Problem with Deep Reinforcement Learning Method基础上的改进工作。在前述工作中其方案思路为将整个3DBPP划分成三个连续的决策问题：1）决定item的装载顺序；2）决定每个item在bin中的摆放方向；3）决定每个item在bin中的摆放位置（coordinates）。上述决策问题中，第二、第三步均采用启发式方法，第一步(决定item的装载顺序）的问题利用深度强化学习来解决。然后这篇文章的工作是将1）决定item的装载顺序和2）决定每个item在bin中的摆放方向都用RL的方式来优化，然后摆放位置仍然是启发式算法。其具体思路是类似于Pointer network，利用encoder与decoder的架构一起学习最优顺序和最优摆放方向的策略(所以是weight sharing)，其中除了利用了pointer networks本身的attention mechanism外，他们还提出了更高一层的intra-attention mechanism（即在decode的过程中除了利用encoder的hidden states信息外，还利用前序时间步的decoder的hidden state，能有效防止重复item在序列中重复出现）。 —— Xijun
+
+## Pointer Networks ## 
+
+Oriol Vinyals (Google brain), Meire Fortunato (UC Berkeley) and Navdeep Jaitly (Google brain). NIPS 2015.
+
+这是第一篇利用seq2seq模型通过end-to-end的方式来求解TSP问题的工作。主要贡献在于1）利用RNN构造了decoder和encoder，2）修改了传统attention networks的结构（去掉了传统attention中的weight-sum而直接输出distribution），并用此修正的attention连接encoder和decoder。3）利用标准的tsp solver作为标签，supervised的方式训练这样的网络，从而得到tsp问题的结果（节点顺序）。本文的实验中，最大的节点个数是500。——Huiling
+
+## NEURAL COMBINATORIAL OPTIMIZATION WITH REINFORCEMENT LEARNING ##
+
+Irwan Bello, Hieu Pham, Quoc V. Le, Mohammad Norouzi & Samy Bengio （Google brain）. ICLR workshop, 2017. 
+
+这是基于Pointer networks的改进工作，依然应用到tsp问题上。同时，作者也给出了在knapsack问题上的实验结果。本文依赖的网络结构依然是pointer networks，主要贡献在于使用了RL的训练方法。一种是基于pretraining的方法，其主要贡献是：1）使用policy gradient，问题（例如：TSP）是agent，不同时刻的Graph作为state，以期学出Q-policy。2）引入多线程处理算法A3C，其中critic有三个模块，分别是2个LSTM和1个二层神经网络（激活函数是relu）。本文同时还给出了另一种不需要pretraining的online的方法，active search。主要区别是：1）从一个固定的state出发，利用不同的hyperparameters, 采样得到不同的pi，2）求出最小的L_j = L（pi_j|s）。这两个步骤主要是用来改进decoding的过程。3）不断的利用test数据集来refine网络。通过后文实验显示，active search会得到质量更高的解，同时并未花费更多的时间。——Huiling
+
+
+## Reinforcement Learning for Solving the Vehicle Routing Problem ##
+
+Mohammadreza Nazari Afshin Oroojlooy Martin Takác Lawrence V. Snyder (Lehigh Univ.) NIPS， 2018
+
+这是基于Pointer networks和Neural combinatorial两个工作的改进工作。与NEURAL COMBINATORIAL OPTIMIZATION WITH REINFORCEMENT LEARNING唯一的区别是，encoder的部分直接利用embedding来代替encoder，从而改进原有的pointer networks不适用于“基于时间的模型”这一劣势。这个文章的优势不仅在于可以处理Over time的模型，同时为constraints satisfactation的问题在end-to-end模型上的处理提供了可能。本文在vrp问题上做了测试。不过，实验结果仅包括在50辆车上的调度，是一个非常小规模的问题。—— Huiling
+
+
+## ATTENTION, LEARN TO SOLVE ROUTING PROBLEMS! ##
+
+Wouter Kool, Herke van Hoof & Max Wellling. ICLR 2019. 
+
+本文依然借助encoder-decoder这个结构，来完成end-to-end的处理组合优化问题这一任务。本文的主要创新是借助了transformer （from "Attention is all you need"）的原有架构，将原模型在NLP任务上的效果，迁移到了组合优化问题中。但与原transformer主要的不同点在于，1）原有模型critic部分用了baseline，而本文用的rollout （经过试验对比，rollout的效果会远远好于baseline）。2）借助了Local search来提升解的质量 3）decoder的input没有用PCA降维。
+
+据我们了解，本文是第一篇在100个节点（含以下）的问题上效率超过gurobi的算法。但是，本文的网络结构相对复杂，在更大规模的问题上的时间效率，需要进一步测试，或者修正模型。—— Huiling
