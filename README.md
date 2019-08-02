@@ -29,6 +29,7 @@ The repository archives papers regarding the combination of combinatorial optimi
 |Online Learning for Strong Branching Approximation in Branch-and-Bound| | | 
 |Optimization as a model for few-shot learning| Huiling | |
 |Learning a SAT Solver from Single-Bit Supervision| |  |
+|Machine Learning to Balance the Load in Parallel Branch-and-Bound | Zhenkun | |
 
 ## CO+ML Survey Bengio 2018
 
