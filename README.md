@@ -8,7 +8,6 @@ The repository archives papers regarding the combination of combinatorial optimi
 | Learning to Search in Branch and Bound Algorithm             | Xijun, Mingxuan, Huiling |Mingxuan |
 | Learning to branch in mixed integer programming              | Xijun, Mingxuan, Huiling |Mingxuan            |
 | Learning Combinatorial Optimization Algorithms over Graphs   |    Huiling (**again**), Xijun      |Mingxuan        |
-| Automated Treatment Planning in Radiation Therapy using Generative Adversarial Networks |        Huiling               |    Huiling   |
 | Boosting Combinatorial Problem Modeling with Machine Learning |  Huiling                        |     |
 | Exact Combinatorial Optimization with Graph Convolutional Neural Networks with Graph Convolutional Neural Networks |Xijun                          |Xijun     |
 | Predicting Tactical Solutions to Operational Planning Problems under Imperfect Information| Huiling |        |
@@ -22,6 +21,14 @@ The repository archives papers regarding the combination of combinatorial optimi
 |ATTENTION, LEARN TO SOLVE ROUTING PROBLEMS! | Huiling | Huiling |
 |Reinforcement learning learn to cut| Zhenkun |  |
 |Reinforcement Learning for Solving the Vehicle Routing Problem| Huiling | Huiling |
+|Generalized Inverse Multiobjective Optimization with Application to Cancer Therapy | Zhenkun | |
+|Reinforcement Learning for Integer Programming: Learning to Cut| Zhenkun | Zhenkun |
+|Learning Permutations with Sinkhorn Policy Gradient | Huiling | |
+|Learning to Run Heuristics in Tree Search.  | | |
+|Predicting Solution Summaries to Integer Linear Programs under Imperfect Information with Machine Learning.| Huiling | |
+|Online Learning for Strong Branching Approximation in Branch-and-Bound| | | 
+|Optimization as a model for few-shot learning| | |
+|Learning a SAT Solver from Single-Bit Supervision| |  |
 
 ## CO+ML Survey Bengio 2018
 
