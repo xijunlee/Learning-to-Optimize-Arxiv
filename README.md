@@ -27,7 +27,7 @@ The repository archives papers regarding the combination of combinatorial optimi
 |Learning to Run Heuristics in Tree Search.  | | |
 |Predicting Solution Summaries to Integer Linear Programs under Imperfect Information with Machine Learning.| Huiling | |
 |Online Learning for Strong Branching Approximation in Branch-and-Bound| | | 
-|Optimization as a model for few-shot learning| | |
+|Optimization as a model for few-shot learning| Huiling | |
 |Learning a SAT Solver from Single-Bit Supervision| |  |
 
 ## CO+ML Survey Bengio 2018
