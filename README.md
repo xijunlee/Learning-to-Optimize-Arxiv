@@ -30,6 +30,9 @@ The repository archives papers regarding the combination of combinatorial optimi
 |Optimization as a model for few-shot learning| Huiling | |
 |Learning a SAT Solver from Single-Bit Supervision|Xijun |Xijun  |
 |Machine Learning to Balance the Load in Parallel Branch-and-Bound | Zhenkun | |
+|Attention Solves Your TSP, Approximately| | |
+|A Machine Learning-Based Approximation of Strong Branching| | |
+|Learned Optimizers that Scale and Generalize| | |
 
 ## CO+ML Survey Bengio 2018
 
