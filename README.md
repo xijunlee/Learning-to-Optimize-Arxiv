@@ -19,7 +19,6 @@ The repository archives papers regarding the combination of combinatorial optimi
 |Pointer Networks| Huiling, Xijun | Huiling |
 |NEURAL COMBINATORIAL OPTIMIZATION WITH REINFORCEMENT LEARNING| Huiling,Xijun |  Huiling |
 |ATTENTION, LEARN TO SOLVE ROUTING PROBLEMS! | Huiling | Huiling |
-|Reinforcement learning learn to cut| Zhenkun |  |
 |Reinforcement Learning for Solving the Vehicle Routing Problem| Huiling | Huiling |
 |Generalized Inverse Multiobjective Optimization with Application to Cancer Therapy | Zhenkun | |
 |Reinforcement Learning for Integer Programming: Learning to Cut| Zhenkun | Zhenkun |
@@ -30,7 +29,7 @@ The repository archives papers regarding the combination of combinatorial optimi
 |Optimization as a model for few-shot learning| Huiling | |
 |Learning a SAT Solver from Single-Bit Supervision|Xijun |Xijun  |
 |Machine Learning to Balance the Load in Parallel Branch-and-Bound | Zhenkun | |
-|Attention Solves Your TSP, Approximately|Xijun |Xijun |
+|Attention Solves Your TSP, Approximately| | |
 |A Machine Learning-Based Approximation of Strong Branching| | |
 |Learned Optimizers that Scale and Generalize| | |
 
@@ -161,6 +160,11 @@ Mohammadreza Nazari Afshin Oroojlooy Martin Takác Lawrence V. Snyder (Lehigh Un
 
 这是基于Pointer networks和Neural combinatorial两个工作的改进工作。与NEURAL COMBINATORIAL OPTIMIZATION WITH REINFORCEMENT LEARNING唯一的区别是，encoder的部分直接利用embedding来代替encoder，从而改进原有的pointer networks不适用于“基于时间的模型”这一劣势。这个文章的优势不仅在于可以处理Over time的模型，同时为constraints satisfactation的问题在end-to-end模型上的处理提供了可能。本文在vrp问题上做了测试。不过，实验结果仅包括在50辆车上的调度，是一个非常小规模的问题。—— Huiling
 
+## Reinforcement Learning for Integer Programming: Learning to Cut ##
+
+Yunhao Tang, Shipra Agrawal, Yuri Faenza (Columbia University), arxiv 2019
+
+在这篇文章中，作者提出来用强化学习来加速割平面法的收敛速度。对于一个IP问题，割平面法是通过对一个松弛后LP最优解加cut(割平面)，并迭代求LP，直到该LP最优解满足所有整数约束。在割平面法中，割平面的选择极大的影响算法收敛速度。目前主要是是通过启发式算法来完成割平面的选择。本文首次提出使用RL来完成割平面法的选择。因为现实中割平面的数量可能非常大，作者通过一些实现技巧，做了些state space size 和 generality of method之间的平衡。实验结果现实，该方法极大的提升了算法的收敛速度，且具有良好的泛华能力。该算法还可以作为一个子程序用到一些Branch and Cut的solver里。-— Zhenkun
 
 ## ATTENTION, LEARN TO SOLVE ROUTING PROBLEMS! ##
 
