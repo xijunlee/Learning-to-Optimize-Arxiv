@@ -174,3 +174,14 @@ Wouter Kool, Herke van Hoof & Max Wellling. ICLR 2019.
 本文依然借助encoder-decoder这个结构，来完成end-to-end的处理组合优化问题这一任务。本文的主要创新是借助了transformer （from "Attention is all you need"）的原有架构，将原模型在NLP任务上的效果，迁移到了组合优化问题中。但与原transformer主要的不同点在于，1）原有模型critic部分用了baseline，而本文用的rollout （经过试验对比，rollout的效果会远远好于baseline）。2）借助了Local search来提升解的质量 3）decoder的input没有用PCA降维。
 
 据我们了解，本文是第一篇在100个节点（含以下）的问题上效率超过gurobi的算法。但是，本文的网络结构相对复杂，在更大规模的问题上的时间效率，需要进一步测试，或者修正模型。—— Huiling
+
+## Learning to Run Heuristics in Tree Search ##
+
+Khalil, Elias B., et al. "Learning to Run Heuristics in Tree Search." IJCAI. 2017.
+
+本文提出了一种利用机器学习方法来指导branch&bound算法中启发式搜索解的框架。首先来说，目前市面上最好的开源mip求解器SCIP，在其branch&bound实现的过程中，对于每个节点都会有多种heuristic方法来进行节点选择和变量的选择，而这些启发式的调用频率和规则都是由专家确定的。这也就是说对于不同问题而言，这些启发式的调用频率都不会因问题不同而有所改变。因此本文作者提出了利用机器学习的方法来学习面对不同问题时branch&bound算法启发式调用规则，从而提高branch&bound算法的收敛速度。具体来说，对于某一种启发式H而言，给定一个b&b搜索树，它需要一个二分类器帮助其确定在树中某一个节点是否使用该启发式H。这是一个监督学习，因此需要线下收集大量的（feature,label），简单来说feature包括节点信息和树的整体信息等，label是该启发式H能否找到incumbent，能找到是1，不能是0.
+
+他们通过实验发现提出的机器学习框架要比SCIP默认（专家设定）的启发式调用规则更能提升branch&bound算法的效率（即primal integral更小，这个指标是本文或者前述文章提出来的一个衡量branch&bound算法性能的指标，越小越好）。
+
+其实本文构思很简单，但是贵在实验丰富，他们claim自己是第一篇系统性地优化树搜索过程中启发式使用策略。  -- Xijun
+
