@@ -32,6 +32,7 @@ The repository archives papers regarding the combination of combinatorial optimi
 |Attention Solves Your TSP, Approximately| | |
 |A Machine Learning-Based Approximation of Strong Branching| | |
 |Learned Optimizers that Scale and Generalize| | |
+|Learning fast optimizers for contextual stochastic integer programs |||
 
 ## CO+ML Survey Bengio 2018
 
