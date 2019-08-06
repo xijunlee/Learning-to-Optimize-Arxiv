@@ -10,7 +10,7 @@ The repository archives papers regarding the combination of combinatorial optimi
 | Learning Combinatorial Optimization Algorithms over Graphs   |    Huiling (**again**), Xijun      |Mingxuan        |
 | Boosting Combinatorial Problem Modeling with Machine Learning |  Huiling                        |     |
 | Exact Combinatorial Optimization with Graph Convolutional Neural Networks with Graph Convolutional Neural Networks |Xijun                          |Xijun     |
-| Predicting Tactical Solutions to Operational Planning Problems under Imperfect Information| Huiling |        |
+| Predicting Tactical Solutions to Operational Planning Problems under Imperfect Information| Huiling, Xijun |        |
 | Discriminative Embeddings of Latent Variable Models for Structured Data | Xijun |       |
 | Learning when to use a decomposition                         |   Zhenkun               |   Zhenkun       |
 |Best arm identification in multi-armed bandits with delayed feedback| Huiling |     Huiling      |
