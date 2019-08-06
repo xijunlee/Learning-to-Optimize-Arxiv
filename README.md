@@ -7,7 +7,7 @@ The repository archives papers regarding the combination of combinatorial optimi
 | Learning to branch                                           | Xijun, Mingxuan, Huiling |Mingxuan             |
 | Learning to Search in Branch and Bound Algorithm             | Xijun, Mingxuan, Huiling |Mingxuan |
 | Learning to branch in mixed integer programming              | Xijun, Mingxuan, Huiling |Mingxuan            |
-| Learning Combinatorial Optimization Algorithms over Graphs   |    Huiling (**again**), Xijun      |Mingxuan        |
+| Learning Combinatorial Optimization Algorithms over Graphs   |    Huiling, Xijun      |Mingxuan        |
 | Boosting Combinatorial Problem Modeling with Machine Learning |  Huiling                        |     |
 | Exact Combinatorial Optimization with Graph Convolutional Neural Networks with Graph Convolutional Neural Networks |Xijun, Huiling                          |Xijun     |
 | Predicting Tactical Solutions to Operational Planning Problems under Imperfect Information| Huiling, Xijun |        |
