@@ -174,7 +174,7 @@ Irwan Bello, Hieu Pham, Quoc V. Le, Mohammad Norouzi & Samy Bengio （Google bra
 
 Mohammadreza Nazari Afshin Oroojlooy Martin Takác Lawrence V. Snyder (Lehigh Univ.) NIPS， 2018
 
-这也是一个基于Pointer networks的改进工作。与NEURAL COMBINATORIAL OPTIMIZATION WITH REINFORCEMENT LEARNING唯一的区别是，encoder的部分直接利用embedding来代替。构造逻辑是：（1）作者认为原有的pointer networks不适合处理更复杂的问题，并在图一做了说明。不适合的主要原因是：每次Input的顺序（比如在vrp问题中，两个customer的顺序）发生变化时，都需要重新计算网络上的所有参数。而我们需要一个新的结构，这个结构对于输入顺序具备不变性。同时，作者认为RNN这个结构对于解决组合优化问题而言，提供了过多的其他信息，但这些信息对于优化本身来说不是必须的。（比如在翻译任务中，RNN可以提供word和position之间的映射关系，这个关系对于翻译而言是重要的，因为反映了语序，但是对于vrp这类问题而言，是不必要的。笔者注：当然，对于tsp而言，也是必要的。）（2）用embedding来代替encoder中的RNN，输入的是一对信息，即：（coordinate, demand）。以期用embedding的结构，学出这样的pair的隐含关系。（3）decoder和attention的部分，与Pointer networks保持一致。（4）同时，本文给出了一种处理约束的方式，即：让约束变成termination condition，也就是，当不满足demand的约束时，就停止。
+这也是一个基于Pointer networks的改进工作。与NEURAL COMBINATORIAL OPTIMIZATION WITH REINFORCEMENT LEARNING唯一的区别是，encoder的部分直接利用embedding来代替。构造逻辑是：（1）作者认为原有的pointer networks不适合处理更复杂的问题，并在图一做了说明。不适合的主要原因是：每次Input的顺序（比如在vrp问题中，两个customer的顺序）发生变化时，都需要重新计算网络上的所有参数。而我们需要一个新的结构，这个结构对于输入顺序具备不变性。同时，作者认为RNN这个结构对于解决组合优化问题而言，提供了过多的其他信息，但这些信息对于优化本身来说不是必须的。（比如在翻译任务中，RNN可以提供word和position之间的映射关系，这个关系对于翻译而言是重要的，因为反映了语序，但是对于vrp这类问题而言，是不必要的。笔者注：当然，对于tsp而言，也是必要的。）（2）用embedding来代替encoder中的RNN，输入的是一对信息，即：（coordinate, demand）。以期用embedding的结构，学出这样的pair的隐含关系。（3）decoder和attention的部分，与Pointer networks保持一致。（4）同时，本文给出了一种处理约束的方式，即：让约束变成termination condition，也就是，当不满足demand的约束时，就停止。（5）本文使用了非常常规的训练方法，即用标准的policy gradient结合actor-critic的算法框架去完成网络训练。
 
 本文在后续讨论中，指出，当有很多约束时，可以让约束变成soft constraints，即：放到目标上去min。但这里带来了一个隐患：约束不一定全部被满足，需要在求出解以后去repair。如果约束很多时，会带来时间上的浪费。
 
