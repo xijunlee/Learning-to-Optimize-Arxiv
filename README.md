@@ -148,15 +148,23 @@ Oriol Vinyals (Google brain), Meire Fortunato (UC Berkeley) and Navdeep Jaitly (
 
 这是第一篇把组合优化看成序列决策问题，利用seq2seq模型通过end-to-end的方式来多对多的求解TSP问题的工作。主要贡献在于1）利用RNN作为decoder和encoder的基本单元。我们可以这样理解这个结构： encoder部分对原求解条件做概括，压缩为隐藏状态，输入给decoder；decoder根据上一次子问题的求解输出和当前求解的状态来预测当前。 2）为了避免隐藏状态的维度过于固定的缺陷，本文又修改了传统attention networks的结构（去掉了传统attention中的weight-sum而直接输出distribution），以此来连接encoder和decoder。3）利用标准的tsp solver作为标签，supervise的方式训练这样的网络，从而得到tsp问题的结果（节点顺序）。
 
-但这种方式有几个缺陷：1）网络结构：RNN结构（包括lstm） 2）适用范围：这种将组合优化问题转化成可利用RNN或者其他seq2seq模型求解的问题，基本条件是该问题一定是序列化决策的问题，因此tsp，vrp这类，是比较合适的。但是，有些问题就需要重新建模，或者，改变模型，例如，set cover, bin-packing, planning以及scheduling等非标准的序列化问题（区分是否是序列化，我比较直观的理解是，）。----- 未完待续
+但这种方式有几个缺陷：1）网络结构：RNN结构（包括lstm）会记忆历史上下文的相关性，但是如果输入顺序发生改变（或者本来就是乱序的），会很大的影响预测结果。在NTM的任务中，人们会用memory networks来改进这个缺陷。但在tsp的问题中，还需要重新测试这种改进的实用性。 2）适用范围：这种将组合优化问题转化成可利用RNN或者其他seq2seq模型求解的问题，基本条件是该问题一定是序列化决策的问题，因此tsp，vrp这类，是比较合适的。但是，有些问题就需要重新建模，或者，改变模型，例如，set cover, bin-packing, planning以及scheduling等非标准的序列化问题（区分是否是序列化，我比较直观的理解是，）。
 
-本文的实验中，最大的节点个数是500。——Huiling 
+另外，该方法所处理的问题规模，也有待进一步考量。在本文的实验中，最大的节点个数是500。——Huiling 
 
 ## NEURAL COMBINATORIAL OPTIMIZATION WITH REINFORCEMENT LEARNING ##
 
 Irwan Bello, Hieu Pham, Quoc V. Le, Mohammad Norouzi & Samy Bengio （Google brain）. ICLR workshop, 2017. 
 
-这是基于Pointer networks的改进工作，依然应用到tsp问题上。同时，作者也给出了在knapsack问题上的实验结果。本文依赖的网络结构依然是pointer networks，主要贡献在于使用了RL的训练方法。一种是基于pretraining的方法，其主要贡献是：1）使用policy gradient，问题（例如：TSP）是agent，不同时刻的Graph作为state，以期学出Q-policy。2）引入多线程处理算法A3C，其中critic有三个模块，分别是2个LSTM和1个二层神经网络（激活函数是relu）。本文同时还给出了另一种不需要pretraining的online的方法，active search。主要区别是：1）从一个固定的state出发，利用不同的hyperparameters, 采样得到不同的pi，2）求出最小的L_j = L（pi_j|s）。这两个步骤主要是用来改进decoding的过程。3）不断的利用test数据集来refine网络。通过后文实验显示，active search会得到质量更高的解，同时并未花费更多的时间。——Huiling
+这是基于Pointer networks的改进工作，同时，文章的实验依然是应用到tsp问题上。不过，作者也给出了在knapsack问题上的实验结果。
+
+本文依赖的网络结构依然是pointer networks，主要贡献在于使用了RL的训练方法，从而不需要事先知道tsp问题的解。其主要思路是：使用policy gradient，问题（例如：TSP）是agent，不同时刻的Graph作为state，以期学出Q-policy。文章给了两种实现算法：
+（1）一种基于pretraining。在该方法中，本文还引入了多线程处理算法A3C，其中critic有三个模块，分别是2个LSTM和1个二层神经网络（激活函数是relu）。这里，采用了标准的A3C的处理方法：critic利用TD-error自我更新，而后梯度传给agent, agent借助critic建议的梯度，完成自己的梯度更新。
+（2）另一种active search，不需要Pretraining。主要区别是：1）从一个固定的state出发，利用不同的hyperparameters, 采样得到不同的pi (policy)。这里的主要技术是：把hyerparameter看成state的温度（类比：Boltzmann distribution和SA中温度的概念）。 2）求出最小的L_j = L（pi_j|s），也就是找出效果最好的pi。这两个步骤主要是用来改进decoding的过程。这样处理的好处是：在给出pi之前就做了Local search的工作。3）不断的利用test数据集来refine网络。
+
+通过后文实验显示，active search会得到质量更高的解，同时并未花费更多的时间。
+
+本文的后续问题是：RL的训练方式比supervised的训练方式，能找到质量更高的解的实验结果，这一结果是否可以扩展到其他问题上。我们需要在新的数据集上测试这样的实验效果。——Huiling
 
 
 ## Reinforcement Learning for Solving the Vehicle Routing Problem ##
