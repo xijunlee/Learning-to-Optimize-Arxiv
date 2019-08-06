@@ -123,7 +123,9 @@ Notes:
 
 这篇文章是利用graph convolutional network来实现learn to branch。具体做法也是将B&B建模成Markov Decision Process。MDP中的每个状态state是由constraint和variable的bipartite图表示，action是从fractional variable中挑选一个变量来做分支。但是其并没有利用reinforcement learning来完成policy的学习，而是通过imitation learning。因此其需要事先构造训练集，即(B&B树的状态，各个fractional variable的得分)。这里B&B树的状态利用构造的bipartite graph表示，variable得分根据strong branching score公式得到。有了这些训练集后，便利用imitation learning的方式训练一个graph convolutional neural network来学习strong branching score挑选variable的policy。
 
-优势：利用GCNN学习strong branching的policy，避免了手工构造特征。实验结果表现超过其他利用机器学习方法提速的branching策略，同时也超过了SCIP的branching策略。 —— Xijun
+优势：利用GCNN学习strong branching的policy，避免了手工构造特征。实验结果表现超过其他利用机器学习方法提速的branching策略，同时也超过了SCIP的branching策略。 —— Xijun 
+另外，这个文章给了一种用学习的方法来处理约束满足的组合优化问题的方法，即：让约束和变量，作为图的定点，利用约束和变量之间的关系，构成二部图。从而，可以通过提取约束和变量所构成的图的特征，来代替认为的设定特征。 ——Huiling
+
 
 ## Solving a New 3D Bin Packing Problem with Deep Reinforcement Learning Method ##
 
