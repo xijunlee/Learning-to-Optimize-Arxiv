@@ -146,7 +146,12 @@ Paper location:  CO-ML-papers⁩/papers/A Multi-task Selected Learning Approach 
 
 Oriol Vinyals (Google brain), Meire Fortunato (UC Berkeley) and Navdeep Jaitly (Google brain). NIPS 2015.
 
-这是第一篇利用seq2seq模型通过end-to-end的方式来求解TSP问题的工作。主要贡献在于1）利用RNN构造了decoder和encoder，2）修改了传统attention networks的结构（去掉了传统attention中的weight-sum而直接输出distribution），并用此修正的attention连接encoder和decoder。3）利用标准的tsp solver作为标签，supervised的方式训练这样的网络，从而得到tsp问题的结果（节点顺序）。本文的实验中，最大的节点个数是500。——Huiling
+这是第一篇把组合优化看成序列决策问题，利用seq2seq模型通过end-to-end的方式来多对多的求解TSP问题的工作。主要贡献在于1）利用RNN作为decoder和encoder的基本单元。我们可以这样理解这个结构： encoder部分对原求解条件做概括，压缩为隐藏状态，输入给decoder；decoder根据上一次子问题的求解输出和当前求解的状态来预测当前。 2）为了避免隐藏状态的维度过于固定的缺陷，本文又修改了传统attention networks的结构（去掉了传统attention中的weight-sum而直接输出distribution），以此来连接encoder和decoder。3）利用标准的tsp solver作为标签，supervise的方式训练这样的网络，从而得到tsp问题的结果（节点顺序）。
+
+但这种方式有几个缺陷：1）网络结构：RNN结构（包括lstm）---- 未完待续
+
+
+本文的实验中，最大的节点个数是500。——Huiling 
 
 ## NEURAL COMBINATORIAL OPTIMIZATION WITH REINFORCEMENT LEARNING ##
 
