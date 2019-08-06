@@ -33,6 +33,7 @@ The repository archives papers regarding the combination of combinatorial optimi
 |A Machine Learning-Based Approximation of Strong Branching|Zhenkun | |
 |Learned Optimizers that Scale and Generalize|Huiling | |
 |Learning fast optimizers for contextual stochastic integer programs |Huiling||
+|Combinatorial Optimization with Graph Convolutional Networks and Guided Tree Search| | |
 
 ## CO+ML Survey Bengio 2018
 
