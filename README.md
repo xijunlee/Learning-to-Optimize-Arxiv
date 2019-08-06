@@ -148,8 +148,7 @@ Oriol Vinyals (Google brain), Meire Fortunato (UC Berkeley) and Navdeep Jaitly (
 
 这是第一篇把组合优化看成序列决策问题，利用seq2seq模型通过end-to-end的方式来多对多的求解TSP问题的工作。主要贡献在于1）利用RNN作为decoder和encoder的基本单元。我们可以这样理解这个结构： encoder部分对原求解条件做概括，压缩为隐藏状态，输入给decoder；decoder根据上一次子问题的求解输出和当前求解的状态来预测当前。 2）为了避免隐藏状态的维度过于固定的缺陷，本文又修改了传统attention networks的结构（去掉了传统attention中的weight-sum而直接输出distribution），以此来连接encoder和decoder。3）利用标准的tsp solver作为标签，supervise的方式训练这样的网络，从而得到tsp问题的结果（节点顺序）。
 
-但这种方式有几个缺陷：1）网络结构：RNN结构（包括lstm）---- 未完待续
-
+但这种方式有几个缺陷：1）网络结构：RNN结构（包括lstm） 2）适用范围：这种将组合优化问题转化成可利用RNN或者其他seq2seq模型求解的问题，基本条件是该问题一定是序列化决策的问题，因此tsp，vrp这类，是比较合适的。但是，有些问题就需要重新建模，或者，改变模型，例如，set cover, bin-packing, planning以及scheduling等非标准的序列化问题（区分是否是序列化，我比较直观的理解是，）。----- 未完待续
 
 本文的实验中，最大的节点个数是500。——Huiling 
 
