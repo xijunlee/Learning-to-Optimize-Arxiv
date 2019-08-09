@@ -202,5 +202,12 @@ Khalil, Elias B., et al. "Learning to Run Heuristics in Tree Search." IJCAI. 201
 
 他们通过实验发现提出的机器学习框架要比SCIP默认（专家设定）的启发式调用规则更能提升branch&bound算法的效率（即primal integral更小，这个指标是本文或者前述文章提出来的一个衡量branch&bound算法性能的指标，越小越好）。
 
-其实本文构思很简单，但是贵在实验丰富，他们claim自己是第一篇系统性地优化树搜索过程中启发式使用策略。  -- Xijun
+其实本文构思很简单，但是贵在实验丰富，他们claim自己是第一篇系统性地优化树搜索过程中启发式使用策略。  —— Xijun
 
+## Learning a SAT Solver from Single-Bit Supervision ## 
+
+Selsam, Daniel, et al. "Learning a SAT solver from single-bit supervision." arXiv preprint arXiv:1802.03685 (2018).
+
+本文提出了用神经网络来学习处理SAT问题的Solver，即NeuroSAT。给定一个谓词逻辑，NeuroSAT能判断该谓词逻辑是不是可满足的，如果可满足的话，其以一定概率能输出对应变量的真值表。该网络的输入是将谓词逻辑转化成literal(即变量）和clause的bipartite图，用邻接矩阵描述这个bipartite图；该网络的总体架构是LSTM；该网络的输出是判断输入的谓词逻辑是否可满足，输出1表示可满足，输出0表示不能满足。训练方式是监督学习，因此需要事先利用SAT solver收集训练数据，即（给定谓词逻，可满足标签）。值得一提的是，NueroSAT如果判断给定谓词逻辑是可满足的话，是有70%的概率能从literal向量最后迭代的值中构造出一个能使给定谓词逻辑为真的assignment。
+
+本文claim最大贡献不是提出的NeuroSAT性能，其性能还是比不过States of the Art SAT solvers。但他们提出的这个NeuroSAT以及网络输出可视化能learn to perform discrete search on their own without the help of hard-coded search procedure, even after only end-to-end training with minimal supervision. —— Xijun
