@@ -220,5 +220,13 @@ Kool, Wouter, Herke van Hoof, and Max Welling. "Attention solves your TSP, appro
 
 在TSP（n=20,50,100）上测试发现，提出的方法比Point networks，Learning Combinatorial Optimization Algorithms over Graphs以及各种启发式方法都要好。 —— Xijun
 
+## Learning Permutations with Sinkhorn Policy Gradient ## 
+
+
+## Learning Fast Optimizers for Contextual Stochastic Integer Programs ## 
+
+Deepmind, UAI 2018.
+
+
 ## Predicting Tactical Solutions to Operational Planning Problems under Imperfect Information ##
 
