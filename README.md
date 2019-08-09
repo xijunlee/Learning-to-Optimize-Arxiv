@@ -20,7 +20,7 @@ The repository archives papers regarding the combination of combinatorial optimi
 |NEURAL COMBINATORIAL OPTIMIZATION WITH REINFORCEMENT LEARNING| Huiling,Xijun |  Huiling |
 |ATTENTION, LEARN TO SOLVE ROUTING PROBLEMS! | Huiling | Huiling |
 |Reinforcement Learning for Solving the Vehicle Routing Problem| Huiling | Huiling |
-|Generalized Inverse Multiobjective Optimization with Application to Cancer Therapy | Zhenkun | |
+|Generalized Inverse Multiobjective Optimization with Application to Cancer Therapy | Zhenkun |Zhenkun |
 |Reinforcement Learning for Integer Programming: Learning to Cut| Zhenkun | Zhenkun |
 |Learning Permutations with Sinkhorn Policy Gradient | Huiling | Huiling |
 |Learning to Run Heuristics in Tree Search.  |Xijun |Xijun |
