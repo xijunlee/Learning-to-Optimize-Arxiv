@@ -220,4 +220,5 @@ Kool, Wouter, Herke van Hoof, and Max Welling. "Attention solves your TSP, appro
 
 在TSP（n=20,50,100）上测试发现，提出的方法比Point networks，Learning Combinatorial Optimization Algorithms over Graphs以及各种启发式方法都要好。 —— Xijun
 
+## Predicting Tactical Solutions to Operational Planning Problems under Imperfect Information ##
 
