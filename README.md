@@ -232,6 +232,11 @@ Kool, Wouter, Herke van Hoof, and Max Welling. "Attention solves your TSP, appro
 
 Deepmind, UAI 2018.
 
+本文的研究目的是利用学习的方法结合已有的数学规划方法和商业软件，以期提高商业软件的求解效率和质量。
+
+本文的研究对象是一般的随机整数规划（SIP）问题，这是一个标准的数学规划模型。一般的，我们认为这是一个two-stage的规划问题。第一阶段先优化一个主要变量，这是一个确定性的优化问题，第二阶段优化一个含有噪声的随机问题，主要考察噪声对于主要变量的最优解的影响。因此，在数学规划领域，人们习惯的做法是利用Benders分解来求原SIP问题。其中，Master problem是第一阶段的优化问题，
+subproblem是含有噪声的随机优化问题。一般流程是：先求解master problem, 而后固定master的解，求解subproblem，求解后利用对偶形式，回传给master其对应的upperbound，而后重新求解master，依次循环，直到master和subproblem分别求出的bound之间的差距，小于给定的threshold，则停止计算。
+
 
 ## Predicting Tactical Solutions to Operational Planning Problems under Imperfect Information ##
 
