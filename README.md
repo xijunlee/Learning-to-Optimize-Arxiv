@@ -232,10 +232,18 @@ Kool, Wouter, Herke van Hoof, and Max Welling. "Attention solves your TSP, appro
 
 Deepmind, UAI 2018.
 
-本文的研究目的是利用学习的方法结合已有的数学规划方法和商业软件，以期提高商业软件的求解效率和质量。
+本文的研究目的是利用学习的方法结合已有的数学规划方法和计算软件，以期提高商业软件的求解效率和质量。
 
 本文的研究对象是一般的随机整数规划（SIP）问题，这是一个标准的数学规划模型。一般的，我们认为这是一个two-stage的规划问题。第一阶段先优化一个主要变量，这是一个确定性的优化问题，第二阶段优化一个含有噪声的随机问题，主要考察噪声对于主要变量的最优解的影响。因此，在数学规划领域，人们习惯的做法是利用Benders分解来求原SIP问题。其中，Master problem是第一阶段的优化问题，
 subproblem是含有噪声的随机优化问题。一般流程是：先求解master problem, 而后固定master的解，求解subproblem，求解后利用对偶形式，回传给master其对应的upperbound，而后重新求解master，依次循环，直到master和subproblem分别求出的bound之间的差距，小于给定的threshold，则停止计算。
+
+本文的具体做法就是结合标准的Benders分解，其主要贡献是：
+
+（1）构造Initial policy和local move policy，以求解Master problem （不包含初值，master的初值由计算软件给出）。 其中，Initial policy的主要作用是利用生成模型，在给定Instance(变量x)的前提下，得到环境变量(contextual variable z)， 为后面的学习提供基础。 这里用的生成模型是NADE，事实上我们可以利用auto-encoder，GAN来做同样的工作。 Local move policy主要是为了在给定x和z的情况下，借助RL来得到policy，从而求解master。 这里采用的RL是标准的A3C，借助的网络结构也是简单的feedforward networks (Relu active function, 2 hidden layers)。
+
+（2）learning dual. 这种做法的好处是：构造dual的时间往往比求解还长，因此利用学习，可以有效的减少这部分的构造时间。 学习的方法也很简单，也是feedforward networks (Relu active function, 2 hidden layers)，结合SGD。 
+
+同时，本文利用了一个技巧：同时生成多个被扰动的subproblems，以并行求解。 -- Huiling
 
 
 ## Predicting Tactical Solutions to Operational Planning Problems under Imperfect Information ##
