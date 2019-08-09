@@ -219,3 +219,5 @@ Kool, Wouter, Herke van Hoof, and Max Welling. "Attention solves your TSP, appro
 本文是提出了一个利用transformer神经网络架构，采用RL训练方式的方法来求解TSP问题。其与Pointer networks的区别很显著：1)本文是transformer架构（可以视为升级复杂版的attention mechanism），point networks是基础版的attention mechanism；2)本文是强化学习的方式训练网络，而point networks是监督学习。本文采用的transformer神经网络架构还是能分为encoder和decoder：1) encoder阶段将TSP中每个节点经过多层transformer层映射到embedding空间，然后将多个节点的embedding取平均，作为对tsp整张图的embedding；2) decoder阶段，每次解码出一个点（每次其实是输出candidate点的概率，然后greedily选取概率最大的candidate点作为解码输出），decoder的输入是（图的embedding, decoder上一次输出点的embedding,decoder第一次输出点的embedding）。采用REINFORCE训练上述网络。
 
 在TSP（n=20,50,100）上测试发现，提出的方法比Point networks，Learning Combinatorial Optimization Algorithms over Graphs以及各种启发式方法都要好。 —— Xijun
+
+
