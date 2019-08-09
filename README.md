@@ -248,3 +248,13 @@ subproblem是含有噪声的随机优化问题。一般流程是：先求解mast
 
 ## Predicting Tactical Solutions to Operational Planning Problems under Imperfect Information ##
 
+Bengio, Lodi, et. al. Mar 2019, Preprint. 
+
+本文的研究对象依然是随机整数规划，本文的研究目的是用确定性的优化+机器学习的方法，来代替传统的对随机问题的直接求解。
+
+本文的主要思路分两个步骤：
+
+（1）依照噪声的分布，同时生成多个被扰动后的确定性优化问题，分别构成training set, test set 和validation set。 方便利用学习来求解。但这里在学习方法上，并没有与learning to branch等文章，有本质的区别。
+（2）利用已知的数据集上，噪声对确定性问题的影响，构造回归模型，通过对回归参数的学习，来代替直接求解随机问题。
+
+本文的主要内容是提出一般的方法论，因此实验很简单。目前正在审稿阶段，可以期待后续的修改和补充。-- Huiling
