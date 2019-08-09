@@ -222,6 +222,11 @@ Kool, Wouter, Herke van Hoof, and Max Welling. "Attention solves your TSP, appro
 
 ## Learning Permutations with Sinkhorn Policy Gradient ## 
 
+本文的主要贡献是，利用Sinkhorn algorithm（一种启发式算法，可以类比理解是结合模拟退火的local search方法。与模拟退火类似，Sinkhorn也常伴有一个表示temperature的超参），构造了Sinkhorn layer。 这个结构可以作为一种Plug-and-play的结构，嵌入到原有神经网络中，从而方便利用backpropagation来实现active/local search。
+
+具体做法是：给定一个矩阵x(instance)，构造其对应的Sinkhorn形式，即对矩阵的每个元素做softmax。 同时，借助这个形式，可以将离散的PG变成DPG。本文利用这种方法求解了TSP 20和permutations(sorting问题)，但其结果显示该方法并不总适用于组合优化。 例如在tsp问题中，该方法并没有优于已有方法。但是在permutation的问题上表现良好。
+
+根据我的理解，这种表现良好的原因是： Permutations的问题的最优解更接近于连续分布，因此本文的方法更适合找到质量更高的解。--Huiling
 
 ## Learning Fast Optimizers for Contextual Stochastic Integer Programs ## 
 
