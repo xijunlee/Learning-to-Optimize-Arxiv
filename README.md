@@ -211,3 +211,11 @@ Selsam, Daniel, et al. "Learning a SAT solver from single-bit supervision." arXi
 本文提出了用神经网络来学习处理SAT问题的Solver，即NeuroSAT。给定一个谓词逻辑，NeuroSAT能判断该谓词逻辑是不是可满足的，如果可满足的话，其以一定概率能输出对应变量的真值表。该网络的输入是将谓词逻辑转化成literal(即变量）和clause的bipartite图，用邻接矩阵描述这个bipartite图；该网络的总体架构是LSTM；该网络的输出是判断输入的谓词逻辑是否可满足，输出1表示可满足，输出0表示不能满足。训练方式是监督学习，因此需要事先利用SAT solver收集训练数据，即（给定谓词逻，可满足标签）。值得一提的是，NueroSAT如果判断给定谓词逻辑是可满足的话，是有70%的概率能从literal向量最后迭代的值中构造出一个能使给定谓词逻辑为真的assignment。
 
 本文claim最大贡献不是提出的NeuroSAT性能，其性能还是比不过States of the Art SAT solvers。但他们提出的这个NeuroSAT以及网络输出可视化能learn to perform discrete search on their own without the help of hard-coded search procedure, even after only end-to-end training with minimal supervision. —— Xijun
+
+## Attention Solves Your TSP, Approximately ## 
+
+Kool, Wouter, Herke van Hoof, and Max Welling. "Attention solves your TSP, approximately." stat 1050 (2018): 22.
+
+本文是提出了一个利用transformer神经网络架构，采用RL训练方式的方法来求解TSP问题。其与Pointer networks的区别很显著：1)本文是transformer架构（可以视为升级复杂版的attention mechanism），point networks是基础版的attention mechanism；2)本文是强化学习的方式训练网络，而point networks是监督学习。本文采用的transformer神经网络架构还是能分为encoder和decoder：1) encoder阶段将TSP中每个节点经过多层transformer层映射到embedding空间，然后将多个节点的embedding取平均，作为对tsp整张图的embedding；2) decoder阶段，每次解码出一个点（每次其实是输出candidate点的概率，然后greedily选取概率最大的candidate点作为解码输出），decoder的输入是（图的embedding, decoder上一次输出点的embedding,decoder第一次输出点的embedding）。采用REINFORCE训练上述网络。
+
+在TSP（n=20,50,100）上测试发现，提出的方法比Point networks，Learning Combinatorial Optimization Algorithms over Graphs以及各种启发式方法都要好。 —— Xijun
