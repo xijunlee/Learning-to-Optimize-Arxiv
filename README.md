@@ -26,7 +26,7 @@ The repository archives papers regarding the combination of combinatorial optimi
 |Learning to Run Heuristics in Tree Search.  |Xijun |Xijun |
 |Predicting Solution Summaries to Integer Linear Programs under Imperfect Information with Machine Learning.| Huiling | Huiling |
 |Online Learning for Strong Branching Approximation in Branch-and-Bound|Zhenkun | | 
-|Optimization as a model for few-shot learning| Huiling | |
+|Optimization as a model for few-shot learning| Huiling | Huiling |
 |Learning a SAT Solver from Single-Bit Supervision|Xijun |Xijun  |
 |Machine Learning to Balance the Load in Parallel Branch-and-Bound | Zhenkun | |
 |Attention Solves Your TSP, Approximately|Xijun | |
