@@ -22,9 +22,9 @@ The repository archives papers regarding the combination of combinatorial optimi
 |Reinforcement Learning for Solving the Vehicle Routing Problem| Huiling | Huiling |
 |Generalized Inverse Multiobjective Optimization with Application to Cancer Therapy | Zhenkun | |
 |Reinforcement Learning for Integer Programming: Learning to Cut| Zhenkun | Zhenkun |
-|Learning Permutations with Sinkhorn Policy Gradient | Huiling | |
+|Learning Permutations with Sinkhorn Policy Gradient | Huiling | Huiling |
 |Learning to Run Heuristics in Tree Search.  |Xijun |Xijun |
-|Predicting Solution Summaries to Integer Linear Programs under Imperfect Information with Machine Learning.| Huiling | |
+|Predicting Solution Summaries to Integer Linear Programs under Imperfect Information with Machine Learning.| Huiling | Huiling |
 |Online Learning for Strong Branching Approximation in Branch-and-Bound|Zhenkun | | 
 |Optimization as a model for few-shot learning| Huiling | |
 |Learning a SAT Solver from Single-Bit Supervision|Xijun |Xijun  |
@@ -32,7 +32,7 @@ The repository archives papers regarding the combination of combinatorial optimi
 |Attention Solves Your TSP, Approximately|Xijun | |
 |A Machine Learning-Based Approximation of Strong Branching|Zhenkun | |
 |Learned Optimizers that Scale and Generalize|Huiling | |
-|Learning fast optimizers for contextual stochastic integer programs |Huiling||
+|Learning fast optimizers for contextual stochastic integer programs |Huiling| Huiling |
 |Combinatorial Optimization with Graph Convolutional Networks and Guided Tree Search| | |
 
 ## CO+ML Survey Bengio 2018
