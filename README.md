@@ -3,7 +3,7 @@ The repository archives papers regarding the combination of combinatorial optimi
 
 | Paper Title                                                  | Readers                  |Slide              |
 | :----------------------------------------------------------- | ------------------------ |-------------------|
-| Machine Learning for Combinatorial Optimization: a Methodological Tour d'Horizon | Xijun, Mingxuan, Huiling | |
+| Machine Learning for Combinatorial Optimization: a Methodological Tour d'Horizon | Xijun, Mingxuan, Huiling |All |
 | Learning to branch                                           | Xijun, Mingxuan, Huiling |Mingxuan             |
 | Learning to Search in Branch and Bound Algorithm             | Xijun, Mingxuan, Huiling |Mingxuan |
 | Learning to branch in mixed integer programming              | Xijun, Mingxuan, Huiling |Mingxuan            |
@@ -29,7 +29,7 @@ The repository archives papers regarding the combination of combinatorial optimi
 |Optimization as a model for few-shot learning| Huiling | Huiling |
 |Learning a SAT Solver from Single-Bit Supervision|Xijun |Xijun  |
 |Machine Learning to Balance the Load in Parallel Branch-and-Bound | Zhenkun | |
-|Attention Solves Your TSP, Approximately|Xijun | |
+|Attention Solves Your TSP, Approximately|Xijun |Huiling |
 |A Machine Learning-Based Approximation of Strong Branching|Zhenkun | |
 |Learned Optimizers that Scale and Generalize|Huiling | |
 |Learning fast optimizers for contextual stochastic integer programs |Huiling| Huiling |
