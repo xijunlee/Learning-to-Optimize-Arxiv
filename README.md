@@ -34,6 +34,7 @@ The repository archives papers regarding the combination of combinatorial optimi
 |Learned Optimizers that Scale and Generalize|Huiling | |
 |Learning fast optimizers for contextual stochastic integer programs |Huiling| Huiling |
 |Combinatorial Optimization with Graph Convolutional Networks and Guided Tree Search| Huiling | |
+|Optimization on a Budget: A Reinforcement Learning Approach| Huiling | |
 
 ## CO+ML Survey Bengio 2018
 
