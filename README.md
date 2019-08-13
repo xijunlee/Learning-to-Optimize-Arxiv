@@ -8,7 +8,6 @@ The repository archives papers regarding the combination of combinatorial optimi
 | Learning to Search in Branch and Bound Algorithm             | Xijun, Mingxuan, Huiling |Mingxuan |
 | Learning to branch in mixed integer programming              | Xijun, Mingxuan, Huiling |Mingxuan            |
 | Learning Combinatorial Optimization Algorithms over Graphs   |    Huiling, Xijun      |Mingxuan        |
-| Boosting Combinatorial Problem Modeling with Machine Learning |  Huiling                        |  (-)   |
 | Exact Combinatorial Optimization with Graph Convolutional Neural Networks with Graph Convolutional Neural Networks |Xijun, Huiling                          |Xijun     |
 | Predicting Tactical Solutions to Operational Planning Problems under Imperfect Information| Huiling, Xijun |   Huiling     |
 | Discriminative Embeddings of Latent Variable Models for Structured Data | Xijun |       |
@@ -37,6 +36,7 @@ The repository archives papers regarding the combination of combinatorial optimi
 |Optimization on a Budget: A Reinforcement Learning Approach| Huiling | |
 |A Deep Q-Network for the Beer Game: Reinforcement Learning for Inventory Optimization| Huiling | |
 |Embedding Decision Trees and Random Forests in Constraint Programming| Huiling | |
+| Boosting Combinatorial Problem Modeling with Machine Learning |  Huiling                        |  (-)   |
 
 ## CO+ML Survey Bengio 2018
 
