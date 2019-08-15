@@ -270,4 +270,18 @@ Timothy C. Y. Chan, Tim Craig, Taewoo Lee, Michael B. Sharpe, Operations Researc
 
 针对一个多目标线性规划问题，其原问题是给定一个目标权重向量（weights），就可以得到一个非支配解（又称有效解）。其逆问题是给定一个有效解，就可以确定一个权重向量。但是如果给定的当前解不是有效解的时候，该逆问题是不可行的。本文提出两种解决策略：一种是相对误差的策略。让误差用一个乘积系数来表示。当系数为1时，该解为有效解。第二有是绝对误差的策略。用当前解到最近有效解的距离作为当前解的绝对误差。该误差为0，代表该解为有效解。此外本文还阐明了他们提出的广义多目标逆优化方法与传统帕累托曲面近似技术之间的联系。--Zhenkun
 
+## Combinatorial Optimization with Graph Convolutional Networks and Guided Tree Search ##
+
+2018 NIPS 
+
+本文的研究背景是将多类图上的NP-hard问题（包括Minimum Vertex Cover，Satisfiability以及Maximal Clique），转变成Maximal independent set(MIS)问题。而后，传统的解决MIS问题的方法就是树搜索，但树搜索的最大问题是深度优先和广度优先很难平衡，因此选哪个节点优先分叉往往会对求解的效率起到至关重要的作用。本文的目的就是利用其它方法来加速这种收敛。
+
+本文的主要思路是，用GCN来加速原有启发式算法（树搜索）的收敛。认为树搜索中被分叉的节点都在一个候选集中。利用GCN输出的概率，给树的节点分类{0，1}，分类是1的则被选入候选集。因此，本文将树搜索中最难决策的exploration-exploitation平衡的问题，转变成了训练一个更合适分类的GCN的问题。本文的主要学习方法是supervised learning（主要为了回避RL自身的不稳定性）。并且利用了并行机制：同时生成了多个GCN，使得一次可以生成多个不同的解，从而提升探索性能。
+
+不同的图G_i{V,E,A}构成了一个统一的网络f=f(G_i)，输出是[0,1]^N, 表示节点进入了候选集的概率。这里利用solver在训练集上求出的最优解来打标签I_i。原始训练方式是：直接利用cross-entropy作为目标函数 sum_i loss(I_i, f(G_i, theta))，继而利用选定的solver（例如sgd）做训练。但是这样的训练有一个问题，就是让本不影响最优解性能的节点位置，标签完全相反，见文中图2。因此，在这里本文做了一个改进，就是让目标函数变成：sum_i min_m loss(I_i, f(G_i, theta)), 意味着对于一个给定的训练样本，损失只与预测最准确的结果相关。使得收敛更加稳定。这种做法在很多其他文献中也有涉及，例如NEURAL COMBINATORIAL OPTIMIZATION WITH REINFORCEMENT LEARNING中的active search, Learning Permutations with Sinkhorn Policy Gradient中的Sinkhorn layer，都是为了做类似的改进：在初始点附近就做local search，而后选择效果最好的往下继续进行。
+
+随后本文将该算法与很多经典算法对比，包括gurobi，在求解时间和求解质量上，均有提升。是目前少有的可以比Gurobi效果更好的工作。本文涉及到的图/网络的节点个数都在2000以内，因此不是一个很大的图。
+
+*事实上如果适当转换，set cover，facility location甚至submodular/supermodular都可以变成MIS的问题。* --Huiling
+
 
