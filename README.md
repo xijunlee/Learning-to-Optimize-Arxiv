@@ -284,4 +284,52 @@ Timothy C. Y. Chan, Tim Craig, Taewoo Lee, Michael B. Sharpe, Operations Researc
 
 *事实上如果适当转换，set cover，facility location甚至submodular/supermodular都可以变成MIS的问题。* --Huiling
 
+## Online Learning for Strong Branching Approximation in Branch-and-Bound ##
+
+(Alejandro Marcos Alvarez, Louis Wehenkel, and Quentin Louveaux, 2016) 
+
+这篇论文提出了一种结合了可靠分支（reliability branching）和基于学习的分支（learned branching）的新分支策略。本文提出用一种在线学习算法来学习一个对strong branching的代理模型。然后用在某些情况下用该代理模型来替换原来的strong branching，从而克服了strong branching在某些时候计算代价过大的问题。
+
+在本文的方法中，当分支定界法需要分支时，从当前节点处的分数变量集合中选择一组候选变量，并计算每个变量的分数。 然后选择具有最高分数的变量用于分支。这里的分数计算方法有两种：
+1）如果认为变量的代理模型不可靠，则计算实际strong branching得分，并得到描述当前节点变量的一组特征。 得分用于对候选变量进行排名，但它也存储在数据集（具有特征向量）中以改进strong branching代理模型的精度。
+2）如果认为代理模型是可靠的，则计算描述当前候选变量的特征向量并将其输入给strong branching代理模型（这里用的是线性回归学习的函数），以便快速生成近似的strong branching分数。
+
+此外作者在一些实验上，证明了该方法是有效的。--zhenkun
+
+## A Machine Learning-Based Approximation of Strong Branching ##
+(Alejandro Marcos Alvarez, Louis Wehenkel, and Quentin Louveaux, INFORMS Journal on Computing, 2017) 
+
+针对处理混合整数规划的分支定界法中的分支策略。本文提出了一种快速的代理模型技术，用以模拟strong branching的分支策略。
+这种近似算法是通过机器学习技术在一组观察到的strong branching分支决策中训练获得的。
+为了能够很好的提升代理模型的精度。本文详细设计了特征。本文将特征分为以下三类：
+1）静态特征：它们是从问题参数c，A和b计算出来的。 它们只需一次计算计算，代表问题的静态特征。 这些特征能对问题进行全面描述。
+2）动态特征：这些特征与当前B＆B节点上的解决方案有关。 它们包含当前解决方案中固定变量的比例，变量的上下分数，等等。
+3）动态优化特征：它们旨在表示优化的整体状态。 这些特征汇总了单个当前节点无法提供的全局信息。 当对变量执行分支时，会为该变量存储目标增量。
+
+一旦特征被设计好了，就可以使用机器学习算法来从数据集学习代理模型。 在这项工作中，他们使用Extremely Randomized Trees作为学习算法。
+--zhenkun
+
+## Machine Learning to Balance the Load in Parallel Branch-and-Bound ##
+(Alejandro Marcos Alvarez, Louis Wehenkel, and Quentin Louveaux, 2019) 
+
+本文的主要贡献是开发一种并行B&B方法，该方法使用机器学习来创建和分配给多个处理器的若干子问题，使得每个处理器的工作负载尽量接近。 此外，我们开发了一组新特征，用以预测子问题的节点个数，从而预测该子问题的求解难度。 实验结果表明，该方法可以有效地平衡了几个处理器之间的负载。
+
+在这项工作中，监督学习框架被用来预测子问题节点的数量，以估计问题的难度。为了提高监督学习算法的精度，本文设计了五类特征。每个类别用于表示问题的不同动态。此外，该算法中还采用了一个打分函数来确定那个变量是最后的分支节点，以便通过该节点扩展当前树。
+
+最后算法通过一个贪婪的策略，来为每个处理器分配子问题。--zhenkun
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
