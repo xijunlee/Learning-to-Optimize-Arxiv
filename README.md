@@ -319,6 +319,7 @@ Timothy C. Y. Chan, Tim Craig, Taewoo Lee, Michael B. Sharpe, Operations Researc
 最后算法通过一个贪婪的策略，来为每个处理器分配子问题。--zhenkun
 
 
+## Optimization as a model for few-shot learning, Optimization on a Budget: A Reinforcement Learning Approach, Learned Optimizers that Scale and Generalize##
 
 
 
