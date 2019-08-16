@@ -325,8 +325,7 @@ Twitter, ICLR 2017; NIPS 2009; ICML 2017
 
 这几篇文章共同的背景都是meta-learning。可以与另外的几个文章放到一起来看：MAML：*Model-agnostic meta-learning for fast adaptation of deep networks*，Reptile:*On first-order meta-learning algorithms*，以及阿里的 *Few-Shot Text Classification with Induction Network*。
 
-
-
+Meta-learning的本质是“learning to learn”，为了实现这个目的，人们会训练一系列的任务，来作为共同的training set，在每个任务上，又会有针对自己的support set (training)和query set(test)。
 
 
 
