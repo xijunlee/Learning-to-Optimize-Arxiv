@@ -321,7 +321,9 @@ Timothy C. Y. Chan, Tim Craig, Taewoo Lee, Michael B. Sharpe, Operations Researc
 
 ## Optimization as a model for few-shot learning, Optimization on a Budget: A Reinforcement Learning Approach, Learned Optimizers that Scale and Generalize ##
 
+Twitter, ICLR 2017; NIPS 2009; ICML 2017 
 
+这几篇文章共同的背景都是meta-learning。可以与另外的几个文章放到一起来看：MAML：*Model-agnostic meta-learning for fast adaptation of deep networks*，Reptile:*On first-order meta-learning algorithms*，以及阿里的 *Few-Shot Text Classification with Induction Network*。
 
 
 
