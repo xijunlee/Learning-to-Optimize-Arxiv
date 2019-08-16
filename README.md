@@ -323,19 +323,19 @@ Timothy C. Y. Chan, Tim Craig, Taewoo Lee, Michael B. Sharpe, Operations Researc
 
 Twitter, ICLR 2017; NIPS 2009; ICML 2017 
 
-这几篇文章共同的背景都是meta-learning。可以与另外的几个文章放到一起来看：MAML：*Model-agnostic meta-learning for fast adaptation of deep networks*，Reptile:*On first-order meta-learning algorithms*，以及阿里的 *Few-Shot Text Classification with Induction Network*。
+这几篇文章共同的背景都是meta-learning。可以与另外的几个文章放到一起来看：MAML：*Model-agnostic meta-learning for fast adaptation of deep networks*，Reptile:*Reptile: a Scalable Metalearning Algorithm*，以及阿里的 *Few-Shot Text Classification with Induction Network*。
 
 Meta-learning的本质是“learning to learn”，为了实现这个目的，人们会训练一系列的任务，来作为共同的training set，在每个任务上，又会有针对自己的support set (training)和query set(test)。因此，全部的support 和query构成了training set。计算框架是：利用support set更新建议的梯度theta, 而后利用总的loss（包含query）更新phi,而后沿着不同的task逐一进行，最后迭代到收敛。简单说，可以理解成一个复合函数F(f)的求导的chain rule的过程： F对应整体的loss，就是我们要学习的终极目的，每个support set针对f进行更新，而后利用query更新F。
 
 结合optimization的角度，我们可以这样理解learning to learn: 目的就是要让训练出来的模型代替优化过程，从而自动的完成优化。也就是说，在优化过程中不需要人工处理超参。但是这种优化与传统优化有一个区别：就是我们不是一定要让optimization在已知的问题（training set）上达到最好，而是要让这种优化过程在未知的问题上（test set）上达到最好。这几个文章大多数都沿着这个思路进行展开，只是在细节处理上各有不同： 
 
-*Optimization on a Budget: A Reinforcement Learning Approach* 该文章早于meta-learning这个概念的提出，但是具有同样的motivation。本文的主要目的是利用RL学习Levenberg Marquardt Algorithm (LMA)算法，这是一个解决非线性最小二乘问题的优化方法，是牛顿法的修正方法，主要解决当hessian矩阵不正定的时候，LMA保证了每次迭代的方向都是下降的方向。本文用Q-learning估计出了最优的更新过程。
+*Optimization on a Budget: A Reinforcement Learning Approach* 该文章早于meta-learning这个概念的提出，但是具有同样的motivation。本文的主要目的是利用RL学习Levenberg Marquardt Algorithm (LMA)算法，这是一个解决非线性最小二乘问题的优化方法，是牛顿法的修正方法，主要解决当hessian矩阵不正定的时候，LMA保证了每次迭代的方向都是下降的方向。本文用Q-learning估计出了最优的更新过程。据我们所知，这是第一篇用Q-learning来估计二阶优化算法的。
 
-*Model-agnostic meta-learning for fast adaptation of deep networks* 
+*Model-agnostic meta-learning for fast adaptation of deep networks* 这是MAML的原文，也是目前应用范围最广的few-shot learning算法之一，few-shot learning可以理解为meta-learning的supervised版本。这也是最直接的实现meta-learning的工作，文章的主要目的放在了找到最好的初始化phi上。
 
-*On first-order meta-learning algorithms*
+*Reptile: a Scalable Metalearning Algorithm* 这是Reptile的原文，是对MAML最直接的改良版本。和 MAML 类似，Reptile 会学习神经网络的参数初始化phi，以使神经网络可使用少量新任务数据进行调整。但是 MAML 通过梯度下降算法的计算图来展开微分计算过程，而 Reptile 在每个任务中执行标准形式的随机梯度下降（SGD）：它不用展开计算图或计算任意二阶导数。因此 Reptile 比 MAML 所需的计算量和内存都更少。Reptile 的工作原理是使用泰勒级数逼近更新来分析的。Reptile 更新最大化同一任务中不同小批量的梯度内积，以改善泛化效果。
 
-*Optimization as a model for few-shot learning*
+*Optimization as a model for few-shot learning* 
 
 *Learned Optimizers that Scale and Generalize*
 
