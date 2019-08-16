@@ -325,7 +325,7 @@ Twitter, ICLR 2017; NIPS 2009; ICML 2017
 
 这几篇文章共同的背景都是meta-learning。可以与另外的几个文章放到一起来看：MAML：*Model-agnostic meta-learning for fast adaptation of deep networks*，Reptile:*Reptile: a Scalable Metalearning Algorithm*，以及阿里的 *Few-Shot Text Classification with Induction Network*。
 
-Meta-learning的本质是“learning to learn”，为了实现这个目的，人们会训练一系列的任务，来作为共同的training set，在每个任务上，又会有针对自己的support set (training)和query set(test)。因此，全部的support 和query构成了training set。计算框架是：利用support set更新建议的梯度theta, 而后利用总的loss（包含query）更新phi,而后沿着不同的task逐一进行，最后迭代到收敛。简单说，可以理解成一个复合函数F(f)的求导的chain rule的过程： F对应整体的loss，就是我们要学习的终极目的，每个support set针对f进行更新，而后利用query更新F。
+Meta-learning的本质是“learning to learn”（最早是Schmidhuber在1987年提出的概念，但是在2016年以后Learnining to learning by gradient descent以后才开始逐渐成为更广泛的研究内容），为了实现这个目的，人们会训练一系列的任务，来作为共同的training set，在每个任务上，又会有针对自己的support set (training)和query set(test)。因此，全部的support 和query构成了training set。计算框架是：利用support set更新建议的梯度theta, 而后利用总的loss（包含query）更新phi,而后沿着不同的task逐一进行，最后迭代到收敛。简单说，可以理解成一个复合函数F(f)的求导的chain rule的过程： F对应整体的loss，就是我们要学习的终极目的，每个support set针对f进行更新，而后利用query更新F。
 
 结合optimization的角度，我们可以这样理解learning to learn: 目的就是要让训练出来的模型代替优化过程，从而自动的完成优化。也就是说，在优化过程中不需要人工处理超参。但是这种优化与传统优化有一个区别：就是我们不是一定要让optimization在已知的问题（training set）上达到最好，而是要让这种优化过程在未知的问题上（test set）上达到最好。这几个文章大多数都沿着这个思路进行展开，只是在细节处理上各有不同： 
 
