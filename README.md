@@ -30,10 +30,10 @@ The repository archives papers regarding the combination of combinatorial optimi
 |Machine Learning to Balance the Load in Parallel Branch-and-Bound | Zhenkun | Zhenkun |
 |Attention Solves Your TSP, Approximately|Xijun |Huiling |
 |A Machine Learning-Based Approximation of Strong Branching|Zhenkun | Zhenkun |
-|Learned Optimizers that Scale and Generalize|Huiling | |
+|Learned Optimizers that Scale and Generalize|Huiling | Huiling |
 |Learning fast optimizers for contextual stochastic integer programs |Huiling| Huiling |
 |Combinatorial Optimization with Graph Convolutional Networks and Guided Tree Search| Huiling | |
-|Optimization on a Budget: A Reinforcement Learning Approach| Huiling | |
+|Optimization on a Budget: A Reinforcement Learning Approach| Huiling | Huiling |
 |A Deep Q-Network for the Beer Game: Reinforcement Learning for Inventory Optimization| Huiling | |
 | Boosting Combinatorial Problem Modeling with Machine Learning |  Huiling                        |  (-)   |
 
