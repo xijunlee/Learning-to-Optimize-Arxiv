@@ -335,11 +335,11 @@ Meta-learning的本质是“learning to learn”（最早是Schmidhuber在1987�
 
 *Reptile: a Scalable Metalearning Algorithm* 这是Reptile的原文，是对MAML最直接的改良版本。和 MAML 类似，Reptile 会学习神经网络的参数初始化phi，以使神经网络可使用少量新任务数据进行调整。但是 MAML 通过梯度下降算法的计算图来展开微分计算过程，而 Reptile 在每个任务中执行标准形式的随机梯度下降（SGD）：它不用展开计算图或计算任意二阶导数。因此 Reptile 比 MAML 所需的计算量和内存都更少。Reptile 的工作原理是使用泰勒级数逼近更新来分析的。Reptile 更新最大化同一任务中不同小批量的梯度内积，以改善泛化效果。
 
-*Optimization as a model for few-shot learning* 本文也是一个把optimization看成学习过程的一个文章，与之前不同的是，本文将优化过程中的参数更新与LSTM中的cell更新联系到一起。具体涞水，本文是采用 LSTM表示meta learner，用其状态表达目标分类器的参数的更新，最终学会如何在新的分类任务上，对分类器网络（learner）进行初始化和参数更新。这个优化算法同时考虑一个任务的短时知识和跨多个任务的长时知识（memory & cell，并且通过捕获所有任务之前共享的基础知识，进而更好地初始化learner。
+*Optimization as a model for few-shot learning* 本文也是一个把optimization看成学习过程的一个文章，与之前不同的是，本文将优化过程中的参数更新与LSTM中的cell更新联系到一起。具体来说，本文是采用 LSTM表示meta learner，用其状态表达目标分类器的参数的更新，最终学会如何在新的分类任务上，对分类器网络（learner）进行初始化和参数更新。这个优化算法同时考虑一个任务的短时知识和跨多个任务的长时知识（memory & cell，并且通过捕获所有任务之前共享的基础知识，进而更好地初始化learner。
 
 *Learned Optimizers that Scale and Generalize* 本文与上文的区别主要在于依赖的网络模型不同，不再是依赖一个LSTM，而是构造了一个hierarchical RNN来作为meta learner. 用不同的tensor RNN在support set上训练，用一个普通的RNN完成在query上的更新。并且，构造了一个global RNN，在完成不同时刻的parameter sharing的同时，协调各个tensor RNN的参数更新（协调方法是：该global RNN的输入是所有的hidden state的平均值，输出是biased terms）。构造层级的RNN的好处是使得每个RNN都不用很大，还能在support set, query set以外获取inter-tensor/inter-parameter的dependecies. 
 
-近两年few-shot, one-shot以及zero-shot（可以理解为不仅学习了过程，还引入了推理）发展很快，有很多模型和结构为transfer, generalization等问题服务。例如：
+近两年few-shot, one-shot以及zero-shot（可以理解为不仅学习了过程，还引入了推理）发展很快，有很多模型和结构为transfer, generalization等问题服务。
 --Huiling
 
 
