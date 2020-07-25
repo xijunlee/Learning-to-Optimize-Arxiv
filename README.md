@@ -9,8 +9,10 @@ Mingxuan Yuan, Huiling Zhen are with Huawei Noah's Ark Lab
 
 Xijun Li is with Huawei Noah's Ark Lab and MIRA Lab of USTC
 
-Thanks to all authors for contributing their notes, here we have
+Thanks to all authors for contributing their notes, here we have:
+
 Weilin Luo from Beihang University
+
 Zhenkun Wang from SUSTech
 
 ## 2020 - Learning to Opitimize (Solver & Logistics) - paper reading progress (opening)
