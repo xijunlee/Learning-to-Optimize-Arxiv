@@ -1,5 +1,5 @@
 # Learning to Optimize
-The repository archives papers regarding the combination of combinatorial optimization and machine learning and corresponding reading notes. This new area, we name it Learning to Optimize
+The repository archives papers regarding the combination of combinatorial optimization and machine learning and corresponding reading notes. This new area, we name it Learning to Optimize.
 
 Corresponding authos: Mingxuan Yuan, Huiling Zhen, and Xijun Li
 
@@ -14,6 +14,8 @@ Thanks to all authors for contributing their notes, here we have:
 Weilin Luo from Beihang University
 
 Zhenkun Wang from SUSTech
+
+Looking forwards to anyone interested in this topic joining us.
 
 ## 2020 - Learning to Opitimize (Solver & Logistics) - paper reading progress (opening)
 
