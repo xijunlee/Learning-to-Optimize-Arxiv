@@ -5,7 +5,7 @@ Corresponding authos: Mingxuan Yuan, Huiling Zhen, and Xijun Li
 
 Email: Yuan.Mingxuan@huawei.com, zhenhuiling2@huawei.com, xijun.li@huawei.com
 
-Mingxuan Yuan, Huiling Zhen are with Huawei Noah's Ark Lab
+Mingxuan Yuan and Huiling Zhen are with Huawei Noah's Ark Lab
 
 Xijun Li is with Huawei Noah's Ark Lab and MIRA Lab of USTC
 
