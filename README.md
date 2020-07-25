@@ -1,43 +1,111 @@
 # CO-ML-papers
-The repository archives papers regarding the combination of combinatorial optimization and machine learning and corresponding reading notes. 
+The repository archives papers regarding the combination of combinatorial optimization and machine learning and corresponding reading notes. This new area, we name it Learning to Optimize
 
-| Paper Title                                                  | Readers                  |Slide              |
-| :----------------------------------------------------------- | ------------------------ |-------------------|
-| Machine Learning for Combinatorial Optimization: a Methodological Tour d'Horizon | Xijun, Mingxuan, Huiling |All |
-| Learning to branch                                           | Xijun, Mingxuan, Huiling |Mingxuan             |
-| Learning to Search in Branch and Bound Algorithm             | Xijun, Mingxuan, Huiling |Mingxuan |
-| Learning to branch in mixed integer programming              | Xijun, Mingxuan, Huiling |Mingxuan            |
-| Learning Combinatorial Optimization Algorithms over Graphs   |    Huiling, Xijun      |Mingxuan        |
-| Exact Combinatorial Optimization with Graph Convolutional Neural Networks with Graph Convolutional Neural Networks |Xijun, Huiling                          |Xijun     |
-| Predicting Tactical Solutions to Operational Planning Problems under Imperfect Information| Huiling, Xijun |   Huiling     |
-| Discriminative Embeddings of Latent Variable Models for Structured Data | Xijun |       |
-| Learning when to use a decomposition                         |   Zhenkun               |   Zhenkun       |
-|Best arm identification in multi-armed bandits with delayed feedback| Huiling |     Huiling      |
-|Solving a New 3D Bin Packing Problem with Deep Reinforcement Learning Method| Xijun|Xijun           |
-|A Multi-task Selected Learning Approach for Solving 3D Flexible Bin Packing Problem|Xijun |Xijun |
-|Pointer Networks| Huiling, Xijun | Huiling |
-|NEURAL COMBINATORIAL OPTIMIZATION WITH REINFORCEMENT LEARNING| Huiling,Xijun |  Huiling |
-|ATTENTION, LEARN TO SOLVE ROUTING PROBLEMS! | Huiling | Huiling |
-|Reinforcement Learning for Solving the Vehicle Routing Problem| Huiling | Huiling |
-|Generalized Inverse Multiobjective Optimization with Application to Cancer Therapy | Zhenkun |Zhenkun |
-|Reinforcement Learning for Integer Programming: Learning to Cut| Zhenkun | Zhenkun |
-|Learning Permutations with Sinkhorn Policy Gradient | Huiling | Huiling |
-|Learning to Run Heuristics in Tree Search.  |Xijun |Xijun |
-|Predicting Solution Summaries to Integer Linear Programs under Imperfect Information with Machine Learning.| Huiling | Huiling |
-|Online Learning for Strong Branching Approximation in Branch-and-Bound|Zhenkun |Zhenkun | 
-|Optimization as a model for few-shot learning| Huiling | Huiling |
-|Learning a SAT Solver from Single-Bit Supervision|Xijun |Xijun  |
-|Machine Learning to Balance the Load in Parallel Branch-and-Bound | Zhenkun | Zhenkun |
-|Attention Solves Your TSP, Approximately|Xijun |Huiling |
-|A Machine Learning-Based Approximation of Strong Branching|Zhenkun | Zhenkun |
-|Learned Optimizers that Scale and Generalize|Huiling | Huiling |
-|Learning fast optimizers for contextual stochastic integer programs |Huiling| Huiling |
-|Combinatorial Optimization with Graph Convolutional Networks and Guided Tree Search| Huiling | |
-|Optimization on a Budget: A Reinforcement Learning Approach| Huiling | Huiling |
-|A Deep Q-Network for the Beer Game: Reinforcement Learning for Inventory Optimization| Huiling | |
-| Boosting Combinatorial Problem Modeling with Machine Learning |  Huiling                        |  (-)   |
+Corresponding authos: Mingxuan Yuan, Huiling Zhen, and Xijun Li
 
-## CO+ML Survey Bengio 2018
+Email: Yuan.Mingxuan@huawei.com, zhenhuiling2@huawei.com, xijun.li@huawei.com
+
+Mingxuan Yuan, Huiling Zhen are with Huawei Noah's Ark Lab
+
+Xijun Li is with Huawei Noah's Ark Lab and MIRA Lab of USTC
+
+## 2020 - Learning to Opitimize (Solver & Logistics) - paper reading progress (opening)
+
+| Paper title                                                  | Readers                                     | Commenters |
+| :----------------------------------------------------------- | ------------------------------------------- | ---------- |
+| A General Pricing Scheme for the Simplex Method              | Xiaotian, Fangzhou, Xijun                   |            |
+| A LEARNING-BASED ITERATIVE METHOD FOR SOLVING VEHICLE ROUTING PROBLEMS | Yi                                          |            |
+| An ADMM-Based Interior-Point Method for Large-Scale Linear Programming |                                             |            |
+| DEEPSIMPLEX: REINFORCEMENT LEARNING OF PIVOT RULES IMPROVES THE EFFICIENCY OF SIMPLEX ALGORITHM IN SOLVING LINEAR PROGRAMMING PROBLEMS | Xiaotian                                    |            |
+| Efficient Revised Simplex Method for SVM Training            | Xiaotian                                    |            |
+| FICO opens up the complex world of optimization to business analysts |                                             |            |
+| Improving Optimization Bounds using Machine Learning: Decision Diagrams meet Deep Reinforcement Learning | Xiaotian, Hanchao                           |            |
+| Presolve Reductions in Mixed Integer Programming             |                                             |            |
+| **SCIP - a framework to integrate Constraint and Mixed Integer Programming** | Xiaotian, Hanchao, Xijun, Fangzhou, Huiling |            |
+| Introduction to SCIP                                         | Xiaotian, Hanchao, Xijun, Fangzhou          |            |
+| SCIP Doxygen Documentation                                   | Xiaotian, Hanchao, Xijun, Fangzhou          |            |
+| Improving the Accuracy of Linear Programming Solvers with Iterative Refinement |                                             |            |
+| Machine Learning for Combinatorial Optimization: a Methodological Tour d'Horizon | **ALL**                                     |            |
+| Exact Combinatorial Optimization with Graph Convolutional Neural Networks with Graph Convolutional Neural Networks | Yi, Xiaotian, Hanchao                       |            |
+| ATTENTION, LEARN TO SOLVE ROUTING PROBLEMS!                  | Yi                                          |            |
+| Reinforcement Learning for Solving the Vehicle Routing Problem | Yi                                          |            |
+| Pointer Networks                                             | Yi                                          |            |
+| Learning to Run Heuristics in Tree Search.                   | **ALL**                                     |            |
+| Attention Solves Your TSP, Approximately                     | Yi                                          |            |
+| Combinatorial Optimization with Graph Convolutional Networks and Guided Tree Search | **ALL**                                     |            |
+| Learning the Multiple Traveling Salesmen Problem             | Yi                                          |            |
+| Dynamic pickup and delivery problems (Gerardo Berbeglia et. al. | Yi                                          |            |
+| Waiting and Buffering Strategies for the Dynamic Pickup and Delivery Problem with Time Windows | Yi                                          |            |
+| **0. SCIP: solving constraint integer programs**             | Xiaotian, Hanchao, Xijun, Fangzhou, Huiling |            |
+| **1.1. Challenges in Linear Programming and how SoPlex deals with them** | Xijun, Fangzhou, Xiaotian, Huiling          |            |
+| **1.2. Notes 6 The Primal Simplex Method**                   | Xijun, Fangzhou, Xiaotian, Huiling          |            |
+| **2. Improving the Accuracy of Linear Programming Solvers with Iterative Refinement** | Xijun, Fangzhou, Xiaotian, Huiling          |            |
+| **3. Floating point algorithm**                              | Xijun, Fangzhou, Xiaotian, Huiling          |            |
+| 4. Implementation of Cutting Plane Separators for Mixed Integer Programs | Solver guys                                 |            |
+| 5. Primal heuristics for mixed integer programs              | Solver guys                                 |            |
+| Safe Exploration in Continuous Action Spaces                 | **ALL**                                     |            |
+| Linear Programming 2: Theory and Extensions                  | **ALL**                                     |            |
+| A General Pricing Scheme for the Simplex Method              | Xijun, Fangzhou, Xiaotian, Huiling          |            |
+| Learning Fast Optimizers for Contextual Stochastic Integer Programs |                                             |            |
+| On Constraint Sampling in the Linear Programming Approach to Approximate Dynamic Programming |                                             |            |
+
+## 2019 - Learning to Optimize - paper reading progress
+
+| Paper title                                                  | Readers                  | Commenters |
+| :----------------------------------------------------------- | ------------------------ | ---------- |
+| Machine Learning for Combinatorial Optimization: a Methodological Tour d'Horizon | Xijun, Mingxuan, Huiling | All        |
+| Learning to branch                                           | Xijun, Mingxuan, Huiling | Mingxuan   |
+| Learning to Search in Branch and Bound Algorithm             | Xijun, Mingxuan, Huiling | Mingxuan   |
+| Learning to branch in mixed integer programming              | Xijun, Mingxuan, Huiling | Mingxuan   |
+| Learning Combinatorial Optimization Algorithms over Graphs   | Huiling, Xijun           | Mingxuan   |
+| Exact Combinatorial Optimization with Graph Convolutional Neural Networks with Graph Convolutional Neural Networks | Xijun, Huiling           | Xijun      |
+| Predicting Tactical Solutions to Operational Planning Problems under Imperfect Information | Huiling, Xijun           | Huiling    |
+| Discriminative Embeddings of Latent Variable Models for Structured Data | Xijun                    |            |
+| Learning when to use a decomposition                         | Zhenkun                  | Zhenkun    |
+| Best arm identification in multi-armed bandits with delayed feedback | Huiling                  | Huiling    |
+| Solving a New 3D Bin Packing Problem with Deep Reinforcement Learning Method | Xijun                    | Xijun      |
+| A Multi-task Selected Learning Approach for Solving 3D Flexible Bin Packing Problem | Xijun                    | Xijun      |
+| Pointer Networks                                             | Huiling, Xijun           | Huiling    |
+| NEURAL COMBINATORIAL OPTIMIZATION WITH REINFORCEMENT LEARNING | Huiling,Xijun            | Huiling    |
+| ATTENTION, LEARN TO SOLVE ROUTING PROBLEMS!                  | Huiling                  | Huiling    |
+| Reinforcement Learning for Solving the Vehicle Routing Problem | Huiling                  | Huiling    |
+| Generalized Inverse Multiobjective Optimization with Application to Cancer Therapy | Zhenkun                  | Zhenkun    |
+| Reinforcement Learning for Integer Programming: Learning to Cut | Zhenkun                  | Zhenkun    |
+| Learning Permutations with Sinkhorn Policy Gradient          | Huiling                  | Huiling    |
+| Learning to Run Heuristics in Tree Search.                   | Xijun                    | Xijun      |
+| Predicting Solution Summaries to Integer Linear Programs under Imperfect Information with Machine Learning. | Huiling                  | Huiling    |
+| Online Learning for Strong Branching Approximation in Branch-and-Bound | Zhenkun                  | Zhenkun    |
+| Optimization as a model for few-shot learning                | Huiling                  | Huiling    |
+| Learning a SAT Solver from Single-Bit Supervision            | Xijun                    | Xijun      |
+| Machine Learning to Balance the Load in Parallel Branch-and-Bound | Zhenkun                  | Zhenkun    |
+| Attention Solves Your TSP, Approximately                     | Xijun                    | Huiling    |
+| A Machine Learning-Based Approximation of Strong Branching   | Zhenkun                  | Zhenkun    |
+| Learned Optimizers that Scale and Generalize                 | Huiling                  | Huiling    |
+| Learning fast optimizers for contextual stochastic integer programs | Huiling                  | Huiling    |
+| Combinatorial Optimization with Graph Convolutional Networks and Guided Tree Search | Huiling                  |            |
+| Optimization on a Budget: A Reinforcement Learning Approach  | Huiling                  | Huiling    |
+| A Deep Q-Network for the Beer Game: Reinforcement Learning for Inventory Optimization | Huiling                  |            |
+| Boosting Combinatorial Problem Modeling with Machine Learning | Huiling                  | (-)        |
+| Learning Scheduling Algorithms for Data Processing Clusters  |                          |            |
+| Learning the Multiple Traveling Salesmen Problem             |                          |            |
+| Learning to Perform Local Rewriting for Combinatorial Optimization | Long Kang                |            |
+| Deep Reinforcement Learning with Knowledge Transfer for Online Rides Order Dispatching | Xijun, Weilin            |            |
+| Efficient Ridesharing Order Dispatching with Mean Field Multi-Agent Reinforcement Learning | Huiling, Weilin          |            |
+| Optimizing Online Matching for Ride-Sourcing Services with Multi-Agent Deep Reinforcement Learning |                          |            |
+| Optimizing Taxi Carpool Policies via Reinforcement Learning and Spatio-Temporal Mining | Xijun, Weilin            |            |
+| Crowd recruiter: Selecting participants for piggyback crowdsensing under probabilistic coverage constraint | Huiling                  |            |
+| A taxi order dispatch model based on combinatorial optimization. | Xijun, Weilin            |            |
+| Efficient largescale fleet management via multi-agent deep reinforcement learning | Weilin                   |            |
+| Large-scale order dispatch in on-demand ride-hailing platforms: A learning and planning approach. | Weilin                   |            |
+| Learning to estimate the travel time.                        | Huiling, Weilin          |            |
+| Learning Scheduling Models from Event Data                   | Huiling                  |            |
+| LSTOD: LATENT SPATIAL-TEMPORAL ORIGINDESTINATION PREDICTION MODEL AND ITS APPLICATIONS IN RIDE-SHARING PLATFORMS (ICLR 2020 PAPER under review) | Xijun, Weilin            | Weilin     |
+| A Comprehensive Survey of Graph Embedding: Problems, Techniques and Applications | Xijun, Weilin            |            |
+| Learning Fast Optimizers for Contextual Stochastic Integer Programs |                          |            |
+| On Constraint Sampling in the Linear Programming Approach to Approximate Dynamic Programming |                          |            |
+| DEEPSIMPLEX: REINFORCEMENT LEARNING OF PIVOT RULES IMPROVES THE EFFICIENCY OF SIMPLEX ALGORITHM IN SOLVING LINEAR PROGRAMMING PROBLEMS | Xijun                    |            |
+
+### CO+ML Survey Bengio 2018
 
 Bengio, Yoshua, Andrea Lodi, and Antoine Prouvost. "Machine Learning for Combinatorial Optimization: a Methodological Tour d'Horizon." *arXiv preprint arXiv:1811.06128* (2018).
 
@@ -49,7 +117,7 @@ Notes:
 
 Note location: CO-ML-papers⁩/⁨notes⁩/20190717⁩/bengio-co-ml-survey
 
-## Learning to Branch
+### Learning to Branch
 
 Balcan, Maria-Florina, Travis Dick, Tuomas Sandholm, and Ellen Vitercik. "Learning to branch." *arXiv preprint arXiv:1803.10150* (2018).
 
@@ -61,7 +129,7 @@ Notes:
 
 Note Location: CO-ML-papers⁩/⁨notes⁩/20190717⁩/learn-to-branch-flori
 
-## Learning to Search in Branch and Bound Algorithm
+### Learning to Search in Branch and Bound Algorithm
 
 He, He, Hal Daume III, and Jason M. Eisner. "Learning to search in branch and bound algorithms." *Advances in neural information processing systems*. 2014.
 
@@ -73,7 +141,7 @@ Notes:
 
 Note location: CO-ML-papers⁩/⁨notes⁩/20190717⁩/hehe-learn-to-branch-nips2014
 
-## Learning to Branch in Mixed Integer Programming
+### Learning to Branch in Mixed Integer Programming
 
 Khalil, Elias Boutros, et al. "Learning to branch in mixed integer programming." *Thirtieth AAAI Conference on Artificial Intelligence*. 2016.
 
@@ -83,7 +151,7 @@ Notes:
 
 这篇文章是利用learning to rank学习branch & bound中的经典打分策略Strong Branching(SB)。其具体做法是，在面对任何一个MIP问题时，其算法在500个分支点前都用经典的Strong Branching作为变量评分标准来选择节点的最优分支变量，同时保留过程中的特征（手工构造的72个特种）和打分结果，这些特征和打分结果构成了训练集。在第501个节点时，利用learning to rank学出训练集中的SB打分策略，在后续节点中的变量选择中就都采用learning to rank来选择最优分支变量。 —— Xijun
 
-## Learning when to use a decomposition
+### Learning when to use a decomposition
 
 Kruber M, Lübbecke M E, Parmentier A. Learning when to use a decomposition[C]//International Conference on AI and OR Techniques in Constraint Programming for Combinatorial Optimization Problems. Springer, Cham, 2017: 202-210.
 
@@ -93,8 +161,7 @@ Notes:
 
 这篇文章提出监督学习来检测MIP问题结构，并根据结构安排合适合适分解策略，进而提升solver的求解速度的。当一个MIP问题具有arrowhead结构或者double-bordered block diagonal form。这个MIP就可以利用DW分解来进行更快速的求解。本文将MIP的结构detect问题建模成一个0-1分类问题。其中输入参数是，MIP，分解策略，以及时间范围。本文采用的是scikit-learn library的标准分类器。--zhenkun
 
-
-## Best arm identification in multi-armed bandits with delayed feedback ##
+### Best arm identification in multi-armed bandits with delayed feedback
 
 Aditya Grover, Todor Markov, Peter Attia, Norman Jin, Nicholas Perkins, Bryan Cheong, Michael Chen, Zi Yang, Stephen Harris, William Chueh, Stefano Ermon (Stanford University University of Michigan Lawrence Berkeley National Laboratory )
 
@@ -102,8 +169,7 @@ Notes:
 
 这篇文章的思路与其他文章差别很大，bandit没有用来解决问题本身，而是用来挑选cplex的启发式策略。文章默认，cplex中有很多启发式策略，而针对不同的问题，会自动的筛选不同的。但是在筛选之前，cplex内部会有测试机制。本文就是为了缩短测试的时间而设计的。training set是2000个MIP问题，在有32个arms的rl模型上，利用不同时刻的feedback做训练。test的mip问题，则直接根据这32个arm所对应的特征，挑选启发式算法。因此，##启发式算法本身不重要，重要的是它们做表现出来的特征##。值得我们学习的地方是，这个文章的是把求解Mip转成了资源分配问题，同时是一个online的思路，很适合处理动态的云资源/wireless资源分配问题。-- Huiling
 
-
-## Learning Combinatorial Optimization Algorithms over Graphs ##
+### Learning Combinatorial Optimization Algorithms over Graphs
 
 Khalil, Elias, et al. "Learning combinatorial optimization algorithms over graphs." Advances in Neural Information Processing Systems. 2017.
 
@@ -115,7 +181,7 @@ Notes:
 
 该算法的优点是：graph embedding parameterization can deal with different graph instances and sizes seamlessly. 能自适应地求解来自同一分布但不同size的问题，抓住了同一分布问题的本质。  —— Xijun
 
-## Exact Combinatorial Optimization with Graph Convolutional Neural Networks ##
+### Exact Combinatorial Optimization with Graph Convolutional Neural Networks
 
 Gasse, Maxime, et al. "Exact Combinatorial Optimization with Graph Convolutional Neural Networks." arXiv preprint arXiv:1906.01629 (2019).
 
@@ -128,10 +194,9 @@ Notes:
 优势：利用GCNN学习strong branching的policy，避免了手工构造特征。实验结果表现超过其他利用机器学习方法提速的branching策略，同时也超过了SCIP的branching策略。 —— Xijun 
 另外，这个文章给了一种用学习的方法来处理约束满足的组合优化问题的方法，即：让约束和变量，作为图的定点，利用约束和变量之间的关系，构成二部图。从而，可以通过提取约束和变量所构成的图的特征，来代替认为的设定特征。 ——Huiling
 
+### Solving a New 3D Bin Packing Problem with Deep Reinforcement Learning Method
 
-## Solving a New 3D Bin Packing Problem with Deep Reinforcement Learning Method ##
-
-Hu, Haoyuan, et al. "Solving a new 3d bin packing problem with deep reinforcement learning method." arXiv preprint arXiv:1708.05930 (2017).
+Hu, Haoyuan, et al. "Solving a new 3d bin packing problem with deep reinforcement learning method." arXiv preprint arXiv:1708.05930 (2017).
 
 Paper location: CO-ML-papers⁩/papers/Solving a New 3D Bin Packing Problem with Deep Reinforcement Learning Metho.pdf
 
@@ -139,7 +204,7 @@ Notes:
 
 这篇文章是阿里旗下菜鸟团队利用深度强化学习技术解决他们业务定义的一个新型3D bin packing problem (3DBPP)。具体问题定义为给定一系列待装载的item，如何将这些item装进一个bin中，使得这个bin的表面积最小。其方案思路为将整个3DBPP划分成三个连续的决策问题：1）决定item的装载顺序；2）决定每个item在bin中的摆放方向；3）决定每个item在bin中的摆放位置（coordinates）。上述决策问题中，第二、第三步均采用启发式方法，第一步(决定item的装载顺序）的问题利用深度强化学习来解决。具体来说，利用pointer networks来学习装载顺序的policy。其输入是待装载item的长宽高数据，输出是这些item的顺序(sequence of order)。需要注意的是，pointer network学到的装载policy应该是与摆放方向、摆放位置所采取的heurisitic算法强相关。因为pointer networks的学习（网络参数的更新）中，其reward的计算需要摆放方向、摆放位置所采取的heurisitic算法来辅助的（即算bin的表面积）。 —— Xijun
 
-## A Multi-task Selected Learning Approach for Solving 3D Flexible Bin Packing Problem ##
+### A Multi-task Selected Learning Approach for Solving 3D Flexible Bin Packing Problem
 
 Duan, Lu, et al. "A Multi-task Selected Learning Approach for Solving 3D Flexible Bin Packing Problem." Proceedings of the 18th International Conference on Autonomous Agents and MultiAgent Systems. International Foundation for Autonomous Agents and Multiagent Systems, 2019.
 
@@ -147,7 +212,7 @@ Paper location:  CO-ML-papers⁩/papers/A Multi-task Selected Learning Approach 
 
 这篇文章是阿里旗下菜鸟团队在Solving a New 3D Bin Packing Problem with Deep Reinforcement Learning Method基础上的改进工作。在前述工作中其方案思路为将整个3DBPP划分成三个连续的决策问题：1）决定item的装载顺序；2）决定每个item在bin中的摆放方向；3）决定每个item在bin中的摆放位置（coordinates）。上述决策问题中，第二、第三步均采用启发式方法，第一步(决定item的装载顺序）的问题利用深度强化学习来解决。然后这篇文章的工作是将1）决定item的装载顺序和2）决定每个item在bin中的摆放方向都用RL的方式来优化，然后摆放位置仍然是启发式算法。其具体思路是类似于Pointer network，利用encoder与decoder的架构一起学习最优顺序和最优摆放方向的策略(所以是weight sharing)，其中除了利用了pointer networks本身的attention mechanism外，他们还提出了更高一层的intra-attention mechanism（即在decode的过程中除了利用encoder的hidden states信息外，还利用前序时间步的decoder的hidden state，能有效防止重复item在序列中重复出现）。 —— Xijun
 
-## Pointer Networks ## 
+### Pointer Networks
 
 Oriol Vinyals (Google brain), Meire Fortunato (UC Berkeley) and Navdeep Jaitly (Google brain). NIPS 2015.
 
@@ -157,7 +222,7 @@ Oriol Vinyals (Google brain), Meire Fortunato (UC Berkeley) and Navdeep Jaitly (
 
 另外，该方法所处理的问题规模，也有待进一步考量。在本文的实验中，最大的节点个数是500。——Huiling 
 
-## NEURAL COMBINATORIAL OPTIMIZATION WITH REINFORCEMENT LEARNING ##
+### NEURAL COMBINATORIAL OPTIMIZATION WITH REINFORCEMENT LEARNING
 
 Irwan Bello, Hieu Pham, Quoc V. Le, Mohammad Norouzi & Samy Bengio （Google brain）. ICLR workshop, 2017. 
 
@@ -171,8 +236,7 @@ Irwan Bello, Hieu Pham, Quoc V. Le, Mohammad Norouzi & Samy Bengio （Google bra
 
 本文的后续问题是：RL的训练方式比supervised的训练方式，能找到质量更高的解的实验结果，这一结果是否可以扩展到其他问题上。我们需要在新的数据集上测试这样的实验效果。——Huiling
 
-
-## Reinforcement Learning for Solving the Vehicle Routing Problem ##
+### Reinforcement Learning for Solving the Vehicle Routing Problem
 
 Mohammadreza Nazari Afshin Oroojlooy Martin Takác Lawrence V. Snyder (Lehigh Univ.) NIPS， 2018
 
@@ -182,13 +246,13 @@ Mohammadreza Nazari Afshin Oroojlooy Martin Takác Lawrence V. Snyder (Lehigh Un
 
 本文在vrp问题上做了测试。不过，实验结果仅包括在50辆车上的调度，是一个非常小规模的问题。—— Huiling
 
-## Reinforcement Learning for Integer Programming: Learning to Cut ##
+### Reinforcement Learning for Integer Programming: Learning to Cut
 
 Yunhao Tang, Shipra Agrawal, Yuri Faenza (Columbia University), arxiv 2019
 
 在这篇文章中，作者提出来用强化学习来加速割平面法的收敛速度。对于一个IP问题，割平面法是通过对一个松弛后LP最优解加cut(割平面)，并迭代求LP，直到该LP最优解满足所有整数约束。在割平面法中，割平面的选择极大的影响算法收敛速度。目前主要是是通过启发式算法来完成割平面的选择。本文首次提出使用RL来完成割平面法的选择。因为现实中割平面的数量可能非常大，作者通过一些实现技巧，做了些state space size 和 generality of method之间的平衡。实验结果现实，该方法极大的提升了算法的收敛速度，且具有良好的泛华能力。该算法还可以作为一个子程序用到一些Branch and Cut的solver里。-— Zhenkun
 
-## ATTENTION, LEARN TO SOLVE ROUTING PROBLEMS! ##
+### ATTENTION, LEARN TO SOLVE ROUTING PROBLEMS!
 
 Wouter Kool, Herke van Hoof & Max Wellling. ICLR 2019. 
 
@@ -196,7 +260,7 @@ Wouter Kool, Herke van Hoof & Max Wellling. ICLR 2019.
 
 据我们了解，本文是第一篇在100个节点（含以下）的问题上效率超过gurobi的算法。但是，本文的网络结构相对复杂，在更大规模的问题上的时间效率，需要进一步测试，或者修正模型。—— Huiling
 
-## Learning to Run Heuristics in Tree Search ##
+### Learning to Run Heuristics in Tree Search
 
 Khalil, Elias B., et al. "Learning to Run Heuristics in Tree Search." IJCAI. 2017.
 
@@ -206,7 +270,7 @@ Khalil, Elias B., et al. "Learning to Run Heuristics in Tree Search." IJCAI. 201
 
 其实本文构思很简单，但是贵在实验丰富，他们claim自己是第一篇系统性地优化树搜索过程中启发式使用策略。  —— Xijun
 
-## Learning a SAT Solver from Single-Bit Supervision ## 
+### Learning a SAT Solver from Single-Bit Supervision
 
 Selsam, Daniel, et al. "Learning a SAT solver from single-bit supervision." arXiv preprint arXiv:1802.03685 (2018).
 
@@ -214,7 +278,7 @@ Selsam, Daniel, et al. "Learning a SAT solver from single-bit supervision." arXi
 
 本文claim最大贡献不是提出的NeuroSAT性能，其性能还是比不过States of the Art SAT solvers。但他们提出的这个NeuroSAT以及网络输出可视化能learn to perform discrete search on their own without the help of hard-coded search procedure, even after only end-to-end training with minimal supervision. —— Xijun
 
-## Attention Solves Your TSP, Approximately ## 
+### Attention Solves Your TSP, Approximately
 
 Kool, Wouter, Herke van Hoof, and Max Welling. "Attention solves your TSP, approximately." stat 1050 (2018): 22.
 
@@ -222,7 +286,7 @@ Kool, Wouter, Herke van Hoof, and Max Welling. "Attention solves your TSP, appro
 
 在TSP（n=20,50,100）上测试发现，提出的方法比Point networks，Learning Combinatorial Optimization Algorithms over Graphs以及各种启发式方法都要好。 —— Xijun
 
-## Learning Permutations with Sinkhorn Policy Gradient ## 
+### Learning Permutations with Sinkhorn Policy Gradient
 
 本文的主要贡献是，利用Sinkhorn algorithm（一种启发式算法，可以类比理解是结合模拟退火的local search方法。与模拟退火类似，Sinkhorn也常伴有一个表示temperature的超参），构造了Sinkhorn layer。 这个结构可以作为一种Plug-and-play的结构，嵌入到原有神经网络中，从而方便利用backpropagation来实现active/local search。
 
@@ -230,7 +294,7 @@ Kool, Wouter, Herke van Hoof, and Max Welling. "Attention solves your TSP, appro
 
 根据我的理解，这种表现良好的原因是： Permutations的问题的最优解更接近于连续分布，因此本文的方法更适合找到质量更高的解。--Huiling
 
-## Learning Fast Optimizers for Contextual Stochastic Integer Programs ## 
+### Learning Fast Optimizers for Contextual Stochastic Integer Programs
 
 Deepmind, UAI 2018.
 
@@ -247,8 +311,7 @@ subproblem是含有噪声的随机优化问题。一般流程是：先求解mast
 
 同时，本文利用了一个技巧：同时生成多个被扰动的subproblems，以并行求解。 -- Huiling
 
-
-## Predicting Tactical Solutions to Operational Planning Problems under Imperfect Information ##
+### Predicting Tactical Solutions to Operational Planning Problems under Imperfect Information
 
 Bengio, Lodi, et. al. Mar 2019, Preprint. 
 
@@ -261,8 +324,7 @@ Bengio, Lodi, et. al. Mar 2019, Preprint.
 
 本文的主要内容是提出一般的方法论，因此实验很简单。目前正在审稿阶段，可以期待后续的修改和补充。-- Huiling
 
-
-## Generalized inverse multiobjective optimization with application to cancer therapy ## 
+### Generalized inverse multiobjective optimization with application to cancer therapy
 
 Timothy C. Y. Chan, Tim Craig, Taewoo Lee, Michael B. Sharpe, Operations Research 2014.
 
@@ -270,7 +332,7 @@ Timothy C. Y. Chan, Tim Craig, Taewoo Lee, Michael B. Sharpe, Operations Researc
 
 针对一个多目标线性规划问题，其原问题是给定一个目标权重向量（weights），就可以得到一个非支配解（又称有效解）。其逆问题是给定一个有效解，就可以确定一个权重向量。但是如果给定的当前解不是有效解的时候，该逆问题是不可行的。本文提出两种解决策略：一种是相对误差的策略。让误差用一个乘积系数来表示。当系数为1时，该解为有效解。第二有是绝对误差的策略。用当前解到最近有效解的距离作为当前解的绝对误差。该误差为0，代表该解为有效解。此外本文还阐明了他们提出的广义多目标逆优化方法与传统帕累托曲面近似技术之间的联系。--Zhenkun
 
-## Combinatorial Optimization with Graph Convolutional Networks and Guided Tree Search ##
+### Combinatorial Optimization with Graph Convolutional Networks and Guided Tree Search
 
 2018 NIPS 
 
@@ -284,7 +346,7 @@ Timothy C. Y. Chan, Tim Craig, Taewoo Lee, Michael B. Sharpe, Operations Researc
 
 *事实上如果适当转换，set cover，facility location甚至submodular/supermodular都可以变成MIS的问题。* --Huiling
 
-## Online Learning for Strong Branching Approximation in Branch-and-Bound ##
+### Online Learning for Strong Branching Approximation in Branch-and-Bound
 
 (Alejandro Marcos Alvarez, Louis Wehenkel, and Quentin Louveaux, 2016) 
 
@@ -296,7 +358,8 @@ Timothy C. Y. Chan, Tim Craig, Taewoo Lee, Michael B. Sharpe, Operations Researc
 
 此外作者在一些实验上，证明了该方法是有效的。--zhenkun
 
-## A Machine Learning-Based Approximation of Strong Branching ##
+### A Machine Learning-Based Approximation of Strong Branching
+
 (Alejandro Marcos Alvarez, Louis Wehenkel, and Quentin Louveaux, INFORMS Journal on Computing, 2017) 
 
 针对处理混合整数规划的分支定界法中的分支策略。本文提出了一种快速的代理模型技术，用以模拟strong branching的分支策略。
@@ -309,7 +372,8 @@ Timothy C. Y. Chan, Tim Craig, Taewoo Lee, Michael B. Sharpe, Operations Researc
 一旦特征被设计好了，就可以使用机器学习算法来从数据集学习代理模型。 在这项工作中，他们使用Extremely Randomized Trees作为学习算法。
 --zhenkun
 
-## Machine Learning to Balance the Load in Parallel Branch-and-Bound ##
+### Machine Learning to Balance the Load in Parallel Branch-and-Bound
+
 (Alejandro Marcos Alvarez, Louis Wehenkel, and Quentin Louveaux, 2019) 
 
 本文的主要贡献是开发一种并行B&B方法，该方法使用机器学习来创建和分配给多个处理器的若干子问题，使得每个处理器的工作负载尽量接近。 此外，我们开发了一组新特征，用以预测子问题的节点个数，从而预测该子问题的求解难度。 实验结果表明，该方法可以有效地平衡了几个处理器之间的负载。
@@ -318,8 +382,7 @@ Timothy C. Y. Chan, Tim Craig, Taewoo Lee, Michael B. Sharpe, Operations Researc
 
 最后算法通过一个贪婪的策略，来为每个处理器分配子问题。--zhenkun
 
-
-## Optimization as a model for few-shot learning, Optimization on a Budget: A Reinforcement Learning Approach, Learned Optimizers that Scale and Generalize ##
+### Optimization as a model for few-shot learning, Optimization on a Budget: A Reinforcement Learning Approach, Learned Optimizers that Scale and Generalize
 
 Twitter, ICLR 2017; NIPS 2009; ICML 2017 
 
@@ -329,24 +392,134 @@ Meta-learning的本质是“learning to learn”（最早是Schmidhuber在1987�
 
 结合optimization的角度，我们可以这样理解learning to learn: 目的就是要让训练出来的模型代替优化过程，从而自动的完成优化。也就是说，在优化过程中不需要人工处理超参。但是这种优化与传统优化有一个区别：就是我们不是一定要让optimization在已知的问题（training set）上达到最好，而是要让这种优化过程在未知的问题上（test set）上达到最好。这几个文章大多数都沿着这个思路进行展开，只是在细节处理上各有不同： 
 
-*Optimization on a Budget: A Reinforcement Learning Approach* 该文章早于meta-learning这个概念的提出，但是具有同样的motivation。本文的主要目的是利用RL学习Levenberg Marquardt Algorithm (LMA)算法，这是一个解决非线性最小二乘问题的优化方法，是牛顿法的修正方法，主要解决当hessian矩阵不正定的时候，LMA保证了每次迭代的方向都是下降的方向。本文用Q-learning估计出了最优的更新过程。据我们所知，这是第一篇用Q-learning来估计二阶优化算法的。
+### Optimization on a Budget: A Reinforcement Learning Approach
 
-*Model-agnostic meta-learning for fast adaptation of deep networks* 这是MAML的原文，也是目前应用范围最广的few-shot learning算法之一，few-shot learning可以理解为meta-learning的supervised版本。这也是最直接的实现meta-learning的工作，文章的主要目的放在了找到最好的初始化phi上。
+该文章早于meta-learning这个概念的提出，但是具有同样的motivation。本文的主要目的是利用RL学习Levenberg Marquardt Algorithm (LMA)算法，这是一个解决非线性最小二乘问题的优化方法，是牛顿法的修正方法，主要解决当hessian矩阵不正定的时候，LMA保证了每次迭代的方向都是下降的方向。本文用Q-learning估计出了最优的更新过程。据我们所知，这是第一篇用Q-learning来估计二阶优化算法的。
 
-*Reptile: a Scalable Metalearning Algorithm* 这是Reptile的原文，是对MAML最直接的改良版本。和 MAML 类似，Reptile 会学习神经网络的参数初始化phi，以使神经网络可使用少量新任务数据进行调整。但是 MAML 通过梯度下降算法的计算图来展开微分计算过程，而 Reptile 在每个任务中执行标准形式的随机梯度下降（SGD）：它不用展开计算图或计算任意二阶导数。因此 Reptile 比 MAML 所需的计算量和内存都更少。Reptile 的工作原理是使用泰勒级数逼近更新来分析的。Reptile 更新最大化同一任务中不同小批量的梯度内积，以改善泛化效果。
+### Model-agnostic meta-learning for fast adaptation of deep networks
 
-*Optimization as a model for few-shot learning* 本文也是一个把optimization看成学习过程的一个文章，与之前不同的是，本文将优化过程中的参数更新与LSTM中的cell更新联系到一起。具体来说，本文是采用 LSTM表示meta learner，用其状态表达目标分类器的参数的更新，最终学会如何在新的分类任务上，对分类器网络（learner）进行初始化和参数更新。这个优化算法同时考虑一个任务的短时知识和跨多个任务的长时知识（memory & cell，并且通过捕获所有任务之前共享的基础知识，进而更好地初始化learner。
+ 这是MAML的原文，也是目前应用范围最广的few-shot learning算法之一，few-shot learning可以理解为meta-learning的supervised版本。这也是最直接的实现meta-learning的工作，文章的主要目的放在了找到最好的初始化phi上。
 
-*Learned Optimizers that Scale and Generalize* 本文与上文的区别主要在于依赖的网络模型不同，不再是依赖一个LSTM，而是构造了一个hierarchical RNN来作为meta learner. 用不同的tensor RNN在support set上训练，用一个普通的RNN完成在query上的更新。并且，构造了一个global RNN，在完成不同时刻的parameter sharing的同时，协调各个tensor RNN的参数更新（协调方法是：该global RNN的输入是所有的hidden state的平均值，输出是biased terms）。构造层级的RNN的好处是使得每个RNN都不用很大，还能在support set, query set以外获取inter-tensor/inter-parameter的dependecies. 
+### Reptile: a Scalable Metalearning Algorithm
+
+这是Reptile的原文，是对MAML最直接的改良版本。和 MAML 类似，Reptile 会学习神经网络的参数初始化phi，以使神经网络可使用少量新任务数据进行调整。但是 MAML 通过梯度下降算法的计算图来展开微分计算过程，而 Reptile 在每个任务中执行标准形式的随机梯度下降（SGD）：它不用展开计算图或计算任意二阶导数。因此 Reptile 比 MAML 所需的计算量和内存都更少。Reptile 的工作原理是使用泰勒级数逼近更新来分析的。Reptile 更新最大化同一任务中不同小批量的梯度内积，以改善泛化效果。
+
+### Optimization as a model for few-shot learning
+
+ 本文也是一个把optimization看成学习过程的一个文章，与之前不同的是，本文将优化过程中的参数更新与LSTM中的cell更新联系到一起。具体来说，本文是采用 LSTM表示meta learner，用其状态表达目标分类器的参数的更新，最终学会如何在新的分类任务上，对分类器网络（learner）进行初始化和参数更新。这个优化算法同时考虑一个任务的短时知识和跨多个任务的长时知识（memory & cell，并且通过捕获所有任务之前共享的基础知识，进而更好地初始化learner。
+
+### Learned Optimizers that Scale and Generalize
+
+本文与上文的区别主要在于依赖的网络模型不同，不再是依赖一个LSTM，而是构造了一个hierarchical RNN来作为meta learner. 用不同的tensor RNN在support set上训练，用一个普通的RNN完成在query上的更新。并且，构造了一个global RNN，在完成不同时刻的parameter sharing的同时，协调各个tensor RNN的参数更新（协调方法是：该global RNN的输入是所有的hidden state的平均值，输出是biased terms）。构造层级的RNN的好处是使得每个RNN都不用很大，还能在support set, query set以外获取inter-tensor/inter-parameter的dependecies. 
 
 近两年few-shot, one-shot以及zero-shot（可以理解为不仅学习了过程，还引入了推理）发展很快，有很多模型和结构为transfer, generalization等问题服务。
 --Huiling
 
+### A taxi order dispatch model based on combinatorial optimization.
+
+Zhang, Lingyu, et al. "A taxi order dispatch model based on combinatorial optimization." *Proceedings of the 23rd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining*. ACM, 2017.
+
+This paper proposed a order dispatch model which has been deployed in the online system of Didi Chuxing. The objective of the model is to maximize the global success rate which denotes the rate of an order is accepted by drives. In this way, they could optimize the overall traffic efficiency and user experience.
+
+They formulate the order dispatch model as a *combinatorial optimization problem*, in which the first step is to estimate the probability of a drive accepting an order. They use logistic regression model to predict the probability of driver accepting an order based on amounts of historic pair data (order, driver). Based on the probability matrix they predict, they proceed to construct an combinatorial optimization problem to select the best suitable driver for each order, in order to improve the order success rate.
+
+Besides, they also develop a destination prediction model to predict a destination list when a user open Didi App. They formulate the problem using the Bayesian framework based on user's historical data including departure time, latitude, longitude of departure place.
+
+-- Xijun
+
+### LSTOD: LATENT SPATIAL-TEMPORAL ORIGINDESTINATION PREDICTION MODEL AND ITS APPLICATIONS IN RIDE-SHARING PLATFORMS
+
+Overall: Weakly Accept
+
+Summary: This paper proposes a latent spatial-temporal origin-destination model to address the OD flow prediction problem. 
+
+The main contributions are summarized as follows:
+
+1. The authors propose a purely convolutional framework to learn both short-term and long-term spatio-temporal features simultaneously from dynamic origin-destination flow data.
+2. The authors propose a novel SACN architecture to capture the relevance of OD flows by modeling each OD flow map as an adjacency matrix.
+3. The authors design a periodically shift attention mechanism to model the long-term periodicity.
+4. The results demonstrate that the proposed model outperforms state-of-the-art methods in OD flow prediction, with 6.5% to 15.0% improvement of testing RMSE.
+
+However, my major concerns are as follows:
+
+1. On Page 4, the authors explain the reasons why they use TGCNN instead of RNN-based architectures to capture the temporal representation. However, it would be more convincing if quantitative analysis or empirical results are provided.
+2. On Page 4, readers might be confused with the symbols in the formulation (3) that are not defined clearly.
+3. On Page 7, the experiment only considers one metric, i.e., RMSE. The efficiency comparisons between the proposed model and the baselines are missing.
+
+-- Xijun
+
+### Large-scale order dispatch in on-demand ride-hailing platforms: A learning and planning approach
+
+Zhe Xu et al. "Large-scale order dispatch in on-demand ride-hailing platforms: A learning and planning approach" KDD, 2018
+
+This paper proposes a novel framework to solve the order dispatching problem, that contains a off-line learning module and an on-line planning module. The objective of the framework is to maximize the gross merchandise volume of the whole system.
+
+In the off-line learning module, the environment is modeled as a Markov Decision Process, in which the learning objective is to maximize the accumulated revenue of the driver. To achieve this target, a tabular-RL method based on dynamic programming is applied to collect the state value function for all states. 
+
+According to the learned state value function, the on-line planning process can be finished via formulating order dispatching as a problem of bipartite-graph matching and KM algorithm is used to solve the problem.
+
+The experiment shows that the presented framework has a relatively good performance on measurements such as total revenue, pickup distance and answer rate.
+
+-- Weilin
+
+### Deep Reinforcement Learning with Knowledge Transfer for Online Rides Order Dispatching
+
+Zhaodong Wang et al. "Deep Reinforcement Learning with Knowledge Transfer for Online Rides Order Dispatching" ICDM, 2018
+
+This paper evaluates the revenue (value) of each pair of state-action through DRL techniques and in the basis of that, the order dispatching problem is formulated as a combinatorial optimization issue, which could be solved by some heuristic algorithms.
+
+Specifically, the action space of the MDP is dynamics, which means the number of optional actions for each agent is different and the definition of the state is continuous. Thus, it is hard to obtain tha tabular Q value from the enormous state-action space. To handle the problem, this paper invents a improved DQN that take both state and action as input of the function estimator, and gives a action search strategy to generate action space for training the DQN.
+
+In addition, three transfer learning techniques (fine-tuning, progressive network and CFPT) are introduced to achieve the transferring of knowledge from source city to other target cities. The main idea is to reuse the parameters of the branch trained by features that are adaptable for target city while training its network.  
+
+-- Weilin
+
+### Efficient Ridesharing Order Dispatching with Mean Field Multi-Agent Reinforcement Learning
+
+Minne Li et al. "Efficient Ridesharing Order Dispatching with Mean Field Multi-Agent Reinforcement Learning" World Wide Web, 2019
+
+This paper also model the order dispatching issue as a MDP and solve it based on the Actor-Critic model (that is independent order dispatching algorithm). Aiming at the problem of the changing action set, the Actor module takes each optional action with the observation of agents as input and generate a set of ranking values to choose an order. 
+
+Furthermore, to model other agent's  policies, a mean field approximation is introduced following the mean field reinforcement learning (MFRL), in which the scalability issue in M-A RL with a large amount of agents is addressed via an average response that can approximate the interaction among agents. Specifically, the average response in the order dispatching problem is defined as the number of drivers at the same neighborhood as the agent, divided by the number of available orders for this agent. In practice, this average response is also input into the critic with the action and observation to help obtain the more effective ranking value.
+
+-- Weilin
+
+### Efficient Large-Scale Fleet Management via Multi-Agent Deep Reinforcement Learning 
+
+Kaixiang Lin et al. "Efficient Large-Scale Fleet Management via Multi-Agent Deep Reinforcement Learning" KDD, 2018
+
+This paper tries to maximize the gross merchandise volume of the platform by repositioning available vehicles to locations with larger demand-supply gap via deep reinforcement learning. Accordingly, the action set of each agent specifies where the agent is able to arrive at the next time interval and the reward is defined as the averaged revenue of all agents in the target grid, thus all the agents that are repositioned to the same grid would share one reward.
+
+To solve the DRL problem, two types of contextual information are applied to limit the action space: geographic context and collaborative context. The first one is to reduce the grids that cannot be arrived such as lakes and rivers. The second one is to avoid that vehicles are scheduled in conflicting directions (i.e., vehicles from grid 1 are scheduled to grid 2, and vehicles from grid 2 are scheduled to grid 1). The contextual information is introduced into both DQN and Actor-Critic to improve the performance of the models.
+
+-- Weilin
+
+### Optimizing Online Matching for Ride-Sourcing Services with Multi-Agent Deep Reinforcement Learning
+
+Jintao Ke et al. "Optimizing Online Matching for Ride-Sourcing Services with Multi-Agent Deep Reinforcement Learning" IEEE, 2019
+
+This paper has a different problem setting that it focus more on the passenger side and try to minimize passengers' pickup time through a dynamic control of delayed matching. In this work, a two-fold framework is constructed based on an assumption that a passenger may be matched with a much closer idle driver if his/her request is delayed for a few match time intervals. In the first step, the delayed time of each order is determined by DRL techniques and then, in the second step, optimal matching between idle drivers and unserved passengers is executed in the matching pool.
+
+Specifically, the delayed matching problem is formulated as MDP and two types of rewards are defined: global reward and individual reward. To evaluate the value of each action, DQN and Actor-Critic are both trained in simulator. In the end of each time interval, orders that are decided to enter the matching pool would be matched with an available driver and this dispatching problem is formulated as a combinatorial optimization problem.
+
+-- Weilin
+
+### Optimizing Taxi Carpool Policies via Reinforcement Learning and Spatio-Temporal Mining
+
+Ishan Jindal et al. "Optimizing Taxi Carpool Policies via Reinforcement Learning and Spatio-Temporal Mining" Big Data, 2018
+
+This paper attempts to tackle the issue of taxi carpooling via DRL. The target of this paper is maximizing transportation efficiency and thus reducing the traffic congestion because more orders are served by less vehicles. To achieve this target, the reward of each driver is defined as the effective distance, which is the sum of actual distances between the origin of the trips to the destination of individual trips. Besides that, each agent has three actions: waiting, non-carpool, carpool. Specifically, the top-level carpool decisions are made via DRL and the low-level details are executed based on some rules, including the path-choosing rule in the case of carpool. DQN is used in this work to solve the problem.
+
+In addition, in order to estimate the travel time more precisely, the ST-NN architecture is proposed. This architecture contains two modules: Dist DNN Module and Time DNN Module. The Dist DNN Module takes the GPS coordinates of the origin and destination of an order and gives the estimated distance. As for the Time DNN Module, the activation of last hidden layer in the Dist DNN is fed into this module and the estimated travel time is obtained via a deep neural network.
+
+-- Weilin 
 
 
 
+### DEEPSIMPLEX: REINFORCEMENT LEARNING OF PIVOT RULES IMPROVES THE EFFICIENCY OF SIMPLEX ALGORITHM IN SOLVING LINEAR PROGRAMMING PROBLEMS
 
+This paper was submitted to ICLR2020. It seems that the paper has been rejected due to its small experimnent scale.
 
+First of all, we all know that one of popular method to solve linear programming is the simplex method. The authors of this paper use deep value-based reinforcement learning to learn a pivoting strategy (or called policy) taht at each iteration chooses between two of the most popular pivot rules (i.e., choosing a non-basci variable to become basis variables) -- Dantzig and steepest edge.  ** The idea is so simple and straightforwad **. They optimize the choosing policy on a neural network designed for the simplex method. And they train the network using reinforcement learning and supervised learning respectively for LP relaxations of randomly generated instances of five-city traveling salesman problem. The experimental results show that 20% to 50% reduction in the gap between the learned strategy and the best possible omniscient polices.
 
-
-
+ -- Xijun
