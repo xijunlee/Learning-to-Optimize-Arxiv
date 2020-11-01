@@ -15,7 +15,131 @@ Weilin Luo from Beihang University
 
 Zhenkun Wang from SUSTech
 
+Jinhong and Han from Shanghai Jiao Tong University
+
 Looking forwards to anyone interested in this topic joining us.
+
+## 2020 - Machine Learning for Computer Systems(ML4CS) - paper reading progress (opening)
+
+First a survey road map is given below. The road map is being updated. Stay tuned!
+
+![Road Map of ML4CS](/assets/ml4system.png)
+
+
+| Paper title                                                  | Readers        | Slide |
+| :----------------------------------------------------------- | -------------- | ----- |
+| Performance-Effective and Low-Complexity Task Scheduling for Heterogenous Computing | Jinhong        |       |
+| Machine Learning Priority Rule For Solving Resource-Constrained Project Scheduling Problems | Jinhong        |       |
+| Learning Scheduling Algorithms for Data Processing Clusters  | Jinhong        |       |
+| DeepWeave: Accelerating Job Completion Time with Deep Reinforcement Learning-based Coflow Scheduling | Jinhong        |       |
+| Generalizable Resource Allocation in Stream Processing via Deep Reinforcement Learning | Jinhong        |       |
+| Placeto: Learning Generalizable Device Placement Algorithms for Distributed Machine Learning | Jinhong        |       |
+| DL2 : A Deep Learning-driven Scheduler for Deep Learning Clusters | Jinhong        |       |
+| QL-HEFT: a novel machine learning scheduling scheme base on cloud computing environment | Jinhong        |       |
+| LEARNING FINITE STATE REPRESENTATIONS OF RECURRENT POLICY NETWORKS | Jinhong, Luhan |       |
+| External vs. Internal: An Essay on Machine Learning Agents for Autonomous Database Management Systems | Luhan          |       |
+| Self-Driving Database Management Systems                     | Luhan          |       |
+| Automatic Database Management System Tuning Through Large-scale Machine Learning | Luhan          |       |
+| Query-based Workload Forecasting for Self-Driving Database Management Systems | Luhan, Xijun   |       |
+| An End-to-End Automatic Cloud Database Tuning System Using Deep Reinforcement Learning | Luhan          |       |
+| Learning Memory Access Patterns                              | Luhan          |       |
+| Resource Management with Deep Reinforcement Learning         | Luhan, Xijun   |       |
+| Towards Safe Online Reinforcement Learning in Computer Systems | Luhan          |       |
+| Safe Reinforcement Learning via Shielding                    | Luhan          |       |
+
+### LEARNING FINITE STATE REPRESENTATIONS OF RECURRENT POLICY NETWORKS  
+
+Anurag Koul, Sam Greydanus and Alan Fern, *"LEARNING FINITE STATE REPRESENTATIONS OF RECURRENT POLICY NETWORKS"*,ICLR2019
+
+Notes:
+
+The author of this paper use Moore Machine Network(MMN) to learn the RNN, converting the continuous state representation to finite discrete state representation with less memory consumption. The main idea of this paper is using Finite State Machine(FSM) to reducing the complexity of traditional learning model without degrading of their performance. First of all, the author trains two Quantized Bottleneck Networks(QBN) to quantize memory and observations. Then, the author inserts the QBNs into RNN network and tuning the new network. Finally,  the author extracts equivalent Moore Machine(MM) form MMN and minimizes the number of state representation. --Jinhong
+
+The main idea is to use an autoencoder(QBN Quantized Bottleneck Networks) to convert the continuous state representation to finite discrete state representation. It will change the RNN model to MMN to help improve the interpretability and save computational expense. This is meaningful in industry. And the auther only experiment on synthetic experiments and Atari games. It will degrade performance in complex condition, like two games mentioned in the paper.  --Luhan
+
+### External vs. Internal: An Essay on Machine Learning Agents for Autonomous Database Management Systems
+
+Pavlo, Andrew, et al. "External vs. Internal: An Essay on Machine Learning Agents for Autonomous Database Management Systems." IEEE Data Eng. Bull. 42.2 (2019): 32-46.
+
+Notes：
+
+This article is an overview about parameters tuning in DBMS. The author mainly talk about two engineering approaches for integrating ML agents in a DBMS, external agents and internal agents. External agents reuse the DBMS’s existing APIs and environment data collection infrastructure without having to modify the DBMS itself. However, some changes of configration will cause the machine to restart and the exposed metrics are large and noisy. Internal agents require to design the system’s architecture to natively support autonomous operation. The challenge is that many internal agents affect each other. If we only use single agent, it will increase the dimension and require more trianing data and training time.
+ --Luhan
+
+### Self-Driving Database Management Systems
+
+Pavlo, Andrew, et al. "Self-Driving Database Management Systems." CIDR. Vol. 4. 2017.
+
+Notes：
+
+This paper presents the architecture of Peloton, the first self-driving
+DBMS. The basic architecture consists of three components: Runtime Architecture, Workload Modeling, Control Framework. Runtime Architecture aims to acquire the Real-time performance. Workload Modeling captures the qurey's logical semantics feature to do clustering and forecasting. And the forecasting method is RNN. Control Framework uses receding-horizon
+control model (RHCM) to guide the action using the prediction and history recorded. The experiment show the results are promising and the direction is worth exploring. --Luhan
+
+### Automatic Database Management System Tuning Through Large-scale Machine Learning
+
+Van Aken, Dana, et al. "Automatic database management system tuning through large-scale machine learning." Proceedings of the 2017 ACM International Conference on Management of Data. 2017.
+
+Notes:
+
+The motivation is that the knobs of DBMS are not standardized, not independent and not universal. And some expriments expose that the different configration lead to different performance obviously, such as only modifying the size of buffer pool or logfile. The paper is aim to  deal with the unlabeled metrics. Fisrt, the author choose the internal metrics as feature and do pruning using factor analysis and k-meas.Then, he uses lasso regression model to sort and rank the knobs. The model using some top metrics to help optimize. It uses dynamic mapping to find the nearest histroy and then modify the parameters using GP regression. It proves to be comparable to ones created by human experts and save much time. --Luhan
+
+### Query-based Workload Forecasting for Self-Driving Database Management Systems
+
+Ma, Lin, et al. "Query-based workload forecasting for self-driving database management systems." Proceedings of the 2018 International Conference on Management of Data. 2018.
+
+Notes:
+
+The author chooses the logical sematic as features. And for SQL queries, we can convert them to similar template by replacing the values as placeholder. This will reduce the data scale effectively. First, the author uses improved DBSCAN as online-clustering method. Then, he emsembles the RNN and LR result to do prediction. Considering long time periodical events, he also uses the kernel regression model to help. If the error between the former and the later is larger than 150%, it will choose kernel regression.   --Luhan
+
+
+
+proposed a query-based workload forecasting method for database management systems. The workload forecasting can be beneficial to database management systems optimization. If a  DBMS only considers the behavior of the application in the past when selecting which optimizations to apply, these optimizations may be sub-optimal for the workload in the near future. It can also cause resource contention if the DBMS tries to apply optimizations after the workload has shifted (e.g., it is entering a peak load period). Instead, a self-driving DBMS should choose its optimizations proactively according to the expected workload patterns in the future.  Thus, this is necessary for wokload prediciton. The system can then select the optimization configuration to prepare based on this prediction. However, the workloads for real-world applications are never static. The authos propsosd QeuryBot5000(QB5000) in this paper.  QB5000 is a workload forecasting framework that runs as either an external controller or as an embedded module. The workflow of QB5000 presented in Figure 2. The framework receives SQL queris from the DBMS. This data is first passed into the Pre-Processor that identifies distinct templates in the workload and records their arrival rate history. In this step, various SQL queries can be abstracted to several defined templates. Next, the Clusterer combines the templates with similar arrival rate patterns together. In this step, the complexity of this prediction task is furthermore decreased. Finally, the information is then fed into the Forecaster where it build models that predict the arrival rate of templates in each cluster. Note that if a template cannnot be classied to any cluster, then the templet will be the center of a new cluster. And the Forecaster will periodically update the prediction model for each cluster. In the experiment,  the results show that QB5000 is effective in helping the DBMS select the optimal indexes for the target workload in real time. 	-- Xijun
+
+### An End-to-End Automatic Cloud Database Tuning System Using Deep Reinforcement Learning
+
+Zhang, Ji, et al. "An end-to-end automatic cloud database tuning system using deep reinforcement learning." Proceedings of the 2019 International Conference on Management of Data. 2019.
+
+Notes:
+
+The author declares to be the first end-to-end automatic database tuning system to use deep RL learning and recommended database configurations. The features consist of 63 internal metrics, including 14 state value and 49 accumulated value. The author uses policy-based DDPG(Deep Deterministic Policy Gradient). The author also designs specific reward to take care of both the beginning state and the previous moment state. And the experiments show it performs much better than the former models and database experts.    --Luhan
+
+### Learning Memory Access Patterns
+
+Hashemi, Milad, et al. "Learning memory access patterns." arXiv preprint arXiv:1803.02329 (2018).
+
+Notes:
+
+The paper aims to deal with Prefecting addresses problem. The author does many experiments to find the adequate settings. It is more like the engineering exploration. He uses the delta of addresses instead of origin address beacuse of smaller searching space. He compares two models and prefers the Clustering and LSTM model to traditional embedding LSTM model. The input features are PC number of instruction and the delta addresses. --Luhan
+
+### Resource Management with Deep Reinforcement Learning
+
+Mao, Hongzi, et al. "Resource management with deep reinforcement learning." Proceedings of the 15th ACM Workshop on Hot Topics in Networks. 2016.
+
+Notes:
+
+The author models tasks in idealized situations. Jobs arrive  in discrete time steps. The scheduler selects one or more waiting jobs for scheduling in each time step. We assume that the resource requirements for each task are known at the time of arrival. We want to optimize the average lattancy time. We model the state as for each job, we konw its time slice, CPU number and Memory requirement. The RL network is simple policy gradient network. The experiment show it is effective to use RL. But it is really a simple and ideal condition. Its reward is worth learnning.    --Luhan
+
+Mao et al. proposed a method to solve online multi-resource allocation problem in computer system using deep reinforcement learning. It is relatively novel and interesting in publication of 2016 although it could be thought as simple in 2020. The motivation of this paper is that machine learning can provide a viable alternative to human-generated heuristics for resource management. The typical design flow of human-generated heuristics is (1) come up with clever heuristics for a simplified model of the problem; and (2) painstakingly test and tune the heuristics for good performance in practice. This process often has to be repeated if some perspectives of the problem such as the workload or the metric of interest changes. In this paper, the authors gives a simple model of multi-type resource (CPU and memory) management problem in cluster, where the cluster has a certain capacity for each type of resources, and jobs comes into the cluster dynamically and the jobs consume an certain amount of each type of resources. The objective of this problem is  to schedule the jobs in the cluster fulfilling all resource constraint so as to minimize the average slowdown time of jobs. For this problem, the authors gives an integrate MDP, including design of state space, action space, and reward, inspired by Terits, as shown below. They adopts deep reinforcement learning model to solve this MDP, and train it using REINFORCE. The experiment shows that the DRL method could beat several heuristics. It should be noted that the retraining is still needed when the environment (cluster or job workload) changes notably. The authors also note that learning resource management strategies directly from experience, if we can make it work in a practical context, could offer a real alternative to current heuristic based approach.  -- Xijun
+
+
+
+### Towards Safe Online Reinforcement Learning in Computer Systems
+
+Mao, Hongzi, et al. "Towards Safe Online Reinforcement Learning in Computer Systems."
+
+Notes:
+
+The background is that in many systems, models trained using reinforcement learning (RL) are powerful alternatives to hand-written heuristics, but their potentially unpredictable behavior makes them unsafe for production deployment. The key idea is to train the RL model online, in the real system, but to fall back on a simple, known-safe fallback policy if the system enters an unsafe region of the state space, while still providing sufficient feedback for RL to learn a good policy. There is a "training wheel" helping model solve the unsafe condition and it will receive penalty to prevent the action again. In the Implementation process, we will increase entroy when encountering a new unstable condition to help explore. And we will decrease the entroy when the condition becomes stable. It performs well in different condition and can adapt the changing circumstances quickly. --Luhan
+
+### Safe Reinforcement Learning via Shielding
+
+Alshiekh, Mohammed, et al. "Safe reinforcement learning via shielding." arXiv preprint arXiv:1708.08611 (2017).
+
+Notes:
+
+The paper describes two types of shielding. The first one is preemptive shielding. It will acts before the agent, providing the safe action list to choose. The second one is post-posted shielding. When the agent's action is unsafe, sheild will monitor and correct the errors. The interesting idea is for the later shielding, we can assgin a pushment when agent take unsafe action but can also assign a reward according to the shielding action. Because we can consider the shielding as a projection or as a last network layer.  --Luhan
+
 
 ## 2020 - Learning to Opitimize (Solver & Logistics) - paper reading progress (opening)
 
