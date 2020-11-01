@@ -23,7 +23,7 @@ Looking forwards to anyone interested in this topic joining us.
 
 First a survey road map is given below. The road map is being updated. Stay tuned!
 
-![Road Map of ML4CS](./notes/ml4system.png)
+![Road Map of ML4CS](https://github.com/xijunlee/Learning-to-Optimize-Arxiv/blob/master/notes/ml4system.png)
 
 
 | Paper title                                                  | Readers        | Slide |
